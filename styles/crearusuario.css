@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(../src/img/Fondo.webp);
+}
+
+header{
+    background-color:cadetblue;
+    min-height: 5vh;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+main{
+    margin: 20px;
+   /* min-height: 100vh;*/
+    /*padding: 5px;*/
+       /* border: 1px solid black;*/
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: grid;
+ 
+    grid-template-columns: repeat(2, auto);
+    grid-row-gap: 15px;
+    grid-column-gap: 5px;
+  
+    width: 30vw;
+    /*El primer valor es margen arriba y abajo, el segundo valor es margen izquierda y derecha */
+  
+    margin: 0 auto;
+    background-color: cadetblue;
+    padding: 25px;
+}
+
+.button {
+        text-decoration: none;
+       background-color: coral;
+        padding: 10px;
+        color: black;
+  
+        border-radius: 5px;
+     /*      border-top-right-radius: 10px; */
+       
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+        transition: 0.2s all;
+}
+
+footer{
+    background-color: cadetblue;
+    min-height: 5vh;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid black;
+}
+/*
+.button-up {
+    box-sizing: border-box;
+    border-radius: 999px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    color: white;
+
+    text-align: center;
+    padding: 5px;
+
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+}
+
+.contenedor {
+    background-color: gray;
+    padding: 20px;
+
+    height: 500px;
+    position: relative;
+}
+
+.contenido {
+    background-color: red;
+    padding: 20px;
+
+    width: 50%;
+
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+
+.contenedor-relativo {
+    background-color: gray;
+    padding: 20px;
+
+    height: 500px;
+}
+
+.contenido-relativo {
+    background-color: red;
+    padding: 20px;
+    width: 50%;
+
+    position: relative;
+    top: 15;
+    left: 15;
+}
+
+nav {
+    background-color: aquamarine;
+    height: 50px;
+    padding: 20px;
+    
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav ul li {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    width: 100px;
+    height: 40px;
+}
+*/
