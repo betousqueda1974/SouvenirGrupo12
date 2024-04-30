@@ -6,13 +6,7 @@
     <title>Iniciar sesión</title>
 
     <link rel="stylesheet" href="../styles/iniciosesion.css">
-
-    <style>
-        input{
-            display: block;
-        }
-
-    </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
 <body>
@@ -20,31 +14,34 @@
 
     <main>
         <h1>INICIO DE SESION</h1>
-        <p>Ingresá tu usuario y password</p>
-        <p>Si ya sos parte de Souvenir Company ingresá tus datos</p>
-
+        <p class="TextoComienzo">Ingresá tu usuario y password</p>
+        <p class="TextoComienzo">Si ya sos parte de Souvenir Company ingresá tus datos</p>
+        <br>
+    
         <form action="" method="get">
-            
-            <fieldset>
-                <legend>Datos de usuario</legend>
-                <label for="Ema">Correo electrónico</label>
-                <input id="Ema" type="text" name="Correo" placeholder="Ingrese el correo electrónico" required>
+          <label for="Ema">Correo electrónico</label>
+          <input id="Ema" type="text" name="Correo" placeholder="Ingrese el correo electrónico" required>
 
-                <label for="Pass">Contraseña</label>
-                <input id="Pass" type="password" name="Password" placeholder="Ingrese contraseña" required>
-                
-                <input type="submit">
-                <input type="reset">
-
-            </fieldset>
-
+          <label for="Pass">Contraseña</label>
+          <input id="Pass" type="password" name="Password" placeholder="Ingrese contraseña" required>
+          
+          <input class="button" type="submit">
+          <input class="button" type="reset">
         </form>
-
-        <a href="../index.html">Volver</a>
-        <a href="crearusuario.html">Crear Cuenta</a>
-        <a href="recuperarpass.html">Recuperar Contraseña</a>
+        <br>
+    
+        <a class="button" href="../index.html">Volver</a>
+        <a class="button" href="crearusuario.html">Crear Cuenta</a>
+        <a class="button" href="recuperarpass.html">Recuperar Contraseña</a>
     </main>
 
-    <footer>Derechos reservados Souvenir Company</footer>
+    <footer>
+      <a href="https://www.twitter.com"><i class='bx bxl-twitter'></i></a>
+      <a href="https://www.facebook.com"><i class='bx bxl-facebook-circle'></i></a> 
+      <a href="https://www.pinterest.com"><i class='bx bxl-pinterest'></i></a>
+      <a href="https://www.instagram.com"><i class='bx bxl-instagram'></i></a>
+      <a href="https://www.linkedin.com"><i class='bx bxl-linkedin-square'></i></a>
+      <p>Derechos reservados Souvenir Company</p>
+    </footer>
 </body>
 </html>
