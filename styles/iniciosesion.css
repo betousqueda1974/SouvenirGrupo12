@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body {
+    background-image: url(../src/img/Fondo.webp);
+}
+
 header{
     background-color:cadetblue;
     min-height: 5vh;
@@ -14,7 +18,43 @@ main{
     margin: 20px;
    /* min-height: 100vh;*/
     /*padding: 5px;*/
-    border: 1px solid black;
+   /* border: 1px solid black;*/
+}
+
+h1 {
+    text-align: center;
+}
+
+.TextoComienzo{
+    text-align: center;
+}
+
+form {
+    display: grid;
+ 
+    grid-template-columns: repeat(2, auto);
+    grid-row-gap: 15px;
+    grid-column-gap: 5px;
+  
+    width: 30vw;
+    /*El primer valor es margen arriba y abajo, el segundo valor es margen izquierda y derecha */
+  
+    margin: 0 auto;
+    background-color: cadetblue;
+    padding: 25px;
+}
+
+.button {
+    text-decoration: none;
+    background-color: coral;
+    padding: 10px;
+    color: black;
+
+    border-radius: 5px;
+ /*      border-top-right-radius: 10px; */
+   
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+    transition: 0.2s all;
 }
 
 footer{
@@ -23,6 +63,10 @@ footer{
     text-align: center;
     padding: 5px;
     border: 1px solid black;
+    /*
+    position: absolute;
+    bottom: 0;
+    */
 }
 /*
 .button-up {
