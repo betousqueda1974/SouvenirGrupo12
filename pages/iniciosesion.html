@@ -1,47 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar sesión</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión</title>
 
-    <link rel="stylesheet" href="../styles/iniciosesion.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+  <link rel="stylesheet" href="../styles/iniciosesion.css">
+  <link rel="icon" href="../src/img/LogoSouCom.jpg">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
-    <header>Cabecera de prueba</header>
+  <header>Cabecera de prueba</header>
 
-    <main>
-        <h1>INICIO DE SESION</h1>
-        <p class="TextoComienzo">Ingresá tu usuario y password</p>
-        <p class="TextoComienzo">Si ya sos parte de Souvenir Company ingresá tus datos</p>
-        <br>
-    
-        <form action="" method="get">
-          <label for="Ema">Correo electrónico</label>
-          <input id="Ema" type="text" name="Correo" placeholder="Ingrese el correo electrónico" required>
+  <main>
+    <a class="volver" href="../index.html">Volver</a>
+    <h1>INICIO DE SESION</h1>
+    <p class="TextoComienzo">Ingresá tu usuario y password</p>
+    <p class="TextoComienzo">Si ya sos parte de Souvenir Company ingresá tus datos</p>
+    <br>
 
-          <label for="Pass">Contraseña</label>
-          <input id="Pass" type="password" name="Password" placeholder="Ingrese contraseña" required>
-          
-          <input class="button" type="submit">
-          <input class="button" type="reset">
-        </form>
-        <br>
-    
-        <a class="button" href="../index.html">Volver</a>
-        <a class="button" href="crearusuario.html">Crear Cuenta</a>
-        <a class="button" href="recuperarpass.html">Recuperar Contraseña</a>
-    </main>
+    <form action="" method="get">
+      <label for="Ema">Correo electrónico</label>
+      <input id="Ema" type="text" name="Correo" placeholder="Ingrese el correo electrónico" required>
 
-    <footer>
-      <a href="https://www.twitter.com"><i class='bx bxl-twitter'></i></a>
-      <a href="https://www.facebook.com"><i class='bx bxl-facebook-circle'></i></a> 
-      <a href="https://www.pinterest.com"><i class='bx bxl-pinterest'></i></a>
-      <a href="https://www.instagram.com"><i class='bx bxl-instagram'></i></a>
-      <a href="https://www.linkedin.com"><i class='bx bxl-linkedin-square'></i></a>
-      <p>Derechos reservados Souvenir Company</p>
-    </footer>
+      <label for="Pass">Contraseña</label>
+      <input id="Pass" type="password" name="Password" placeholder="Ingrese contraseña" required>
+      
+      <input class="button" type="submit">
+      <input class="button" type="reset">
+
+      <a class="CrearCuenta" href="crearusuario.html">Crear Cuenta</a>
+    </form>
+    <br>
+    <a class="Recuperar" href="recuperarpass.html">¿No puedes ingresar a tu cuenta?. Recupera el acceso</a>
+  </main>
+
+  <footer>
+    <a href="https://www.twitter.com" target="_blank"><i class='bx bxl-twitter'></i></a>
+    <a href="https://www.facebook.com" target="_blank"><i class='bx bxl-facebook-circle'></i></a> 
+    <a href="https://www.pinterest.com" target="_blank"><i class='bx bxl-pinterest'></i></a>
+    <a href="https://www.instagram.com" target="_blank"><i class='bx bxl-instagram'></i></a>
+    <a href="https://www.linkedin.com" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+    <p>Derechos reservados Souvenir Company</p>
+  </footer>
 </body>
 </html>
