@@ -1,0 +1,309 @@
+:root{
+    --pink: #e84393;
+}
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;  
+}
+
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #f8baa4;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1 rem rgba(0, 0, 0, .1);
+    justify-content: space-between;
+
+}
+
+header .logo{
+    font-size: 3rem;
+    color: white;
+    font-weight: bolder;
+}
+
+header .logo span{
+    color: var(--pink);
+}
+
+header .navbar a{
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #666;
+
+}
+
+header .navbar a:hover{
+    color: var(--pink)
+
+}
+
+header .icons a{
+    font-size: 2.5rem;
+    color: #333;
+    margin-left: 1.5rem;
+
+}
+
+header .icons a:hover{
+color: var(--pink);
+
+}
+
+header #toggler{
+    display: none;
+}
+
+header .fa-bars{
+    font-size: 3rem;
+    color: #333;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0, 0, 0, .3);
+    display: none;
+
+}
+
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    header{
+        padding: 2rem;
+    }
+}
+
+@media (max-width:768px){
+
+    header .fa-bars{
+        display: block;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        background: #eee;
+        border-top: .1rem solid rgba(0, 0, 0, .1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+    }
+
+    header #toggler:checked ~ .navbar{
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+
+
+
+    header .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        border: .1rem solid rgba(0, 0, 0, .1);
+        display: block;
+    }
+
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+body {
+    margin: 0 auto;
+    background-color: #ffffff;  
+}
+
+.container-items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.item{
+    border-radius: 10px;
+}
+.item hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0, 20);
+
+}
+
+.info-products{
+    padding: 15px 30px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+
+}
+.item img{
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s ease;
+    
+}
+
+.item:hover img {
+    transform: scale(1.1); /* Escala la imagen al 110% de su tamaño original */
+}
+
+.item figure{
+    overflow: hidden;
+}
+
+.item hover img{
+    transform: scale(1.2)
+
+}
+
+.price{
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.info-products button{
+    border: none;
+    background: none;
+    background-color: #f8baa4;
+    color: black;
+    padding: 15px 10px;
+    cursor: pointer;
+
+
+}
+
+
+.logo{
+    width: 20%; /* Ajusta la imagen al ancho del contenedor */
+    height: auto;
+    
+}
+img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+}    
+
+.banner{
+    text-align: center; /* Centra los botones horizontalmente */
+    margin-top: 20px; /* Espacio entre la imagen y el banner */
+
+}
+.button {
+    display: inline-block; /* Los botones se alinean uno al lado del otro */
+    margin: 10px; /* Espacio entre los botones */
+    padding: 10px 20px; /* Espaciado interno de los botones */
+    background-color: #F8BAA4; /* Color de fondo de los botones */
+    color: black; /* Color del texto en los botones */
+    text-decoration: none; /* Elimina la subrayado del texto */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.2s; /* Transición de color de fondo */
+}
+.button:hover {
+    background-color: palevioletred
+
+}
+
+.slider-box{
+    width: 50%; /* Ajusta según el diseño de tu página */
+    margin: auto; /* Centra el carrusel horizontalmente */
+    overflow: hidden; /* Oculta las imágenes que no están en la vista */
+
+}
+
+.slider-box ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 20s infinite alternate ease-in-out;
+
+}
+
+.slider-box li{
+    width: 100%;
+    list-style: none;
+    position: relative;
+
+}
+
+main {
+    margin: 20px;
+}
+
+.slider-box img{
+    width: 100%;
+
+}
+@keyframes slide {
+    0% {margin-left: 0; }
+    20% {margin-left: 0; }
+    
+    25% {margin-left: -100%; }
+    45% {margin-left: -100%; }
+
+    50% {margin-left: -200%; }
+    70% {margin-left: -200%; }
+
+    75% {margin-left: -300%; }
+    100% {margin-left: -300%; }
+}
+
+
+@media(max-width:991px){
+
+    body{
+        padding: 30px;
+    }
+
+    .slider-box{
+        width: 100%;
+    }  
+
+
+}
+footer{
+        background-color: #F8BAA4;
+        color: white;
+        text-align: center;
+        margin-top: 20px;
+        
+
+
+
+    }
