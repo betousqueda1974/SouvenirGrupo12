@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #f8baa4;
+    color: white;
+    min-height: 5vh;
+    padding: 5px;
+    border: 1px solid #f8baa4;
+}
+body {
+    margin: 0 auto;
+    background-color: white;
+    
+}
+.logo{
+    width: 20%; /* Ajusta la imagen al ancho del contenedor */
+    height: auto;
+    
+}
+
+main {
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    image-orientation: center;
+}
+
+form {
+ 
+    grid-template-columns: repeat(2, auto);
+    grid-row-gap: 15px;
+    grid-column-gap: 5px;
+    width: 300px;
+    color: black;
+    font-size: 1em;
+    border-radius: 3px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 10px;
+}
+.field{
+    border: solid 1px #ccc;
+    padding: 10px;
+    width: 280px;
+}
+
+.field :focus{
+    border-color: black;
+}
+
+.center-content{
+    text-align: center;
+
+}
+
+.button1 {
+    display: inline-block;
+    text-decoration: none;
+    background-color: white;
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+    border-radius: 7px;
+    border-color: #f8baa4;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+    transition: background-color 0.2s;
+}
+.button1:hover {
+    background-color: #f8baa4;
+}
+
+.button2 {
+    display: inline-block;
+    text-decoration: none;
+    background-color: white;
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+    border-radius: 7px;
+    border-color: #f8baa4;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+    transition: background-color 0.2s;
+}
+.button2:hover {
+    background-color: #f8baa4;
+}
+
+.button3 {
+    text-decoration: none;
+   background-color: #f8baa4;
+    padding: 10px;
+    z-index: 10;
+    color: black;
+    position: fixed; 
+    top: 90px; 
+    left: 10px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+    transition: background-color 0.2s;
+}
+.button3:hover {
+    background-color: palevioletred
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8baa4;
+    min-height: 5vh;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid black;
+}
