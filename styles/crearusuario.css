@@ -1,69 +1,340 @@
-* {
-  margin: 0;
-  padding: 0;
-}
+:root{
+  --pink: #e84393;
+    /* Define la variable CSS para el color rosa */
+  }
+  
+  * {
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      outline: none; border: none;
+      text-decoration: none;
+      text-transform: capitalize;
+      transition: .2s linear;
+      text-transform: none; /* Desactiva la capitalización */
+
+      /* Restablece los márgenes y estilos predeterminados, establece la fuente y otras propiedades globales */
+  }
+  
+  html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden; 
+    text-transform: none; /* Desactiva la capitalización */
+    /* Define el tamaño de fuente base, comportamiento de desplazamiento suave y otros ajustes */ 
+  }
+  
+  header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #f8baa4;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0.5rem 1 rem rgba(0, 0, 0, .1);
+    justify-content: space-between;
+    text-transform: none;
+    
+    /* Establece estilos para el encabezado, incluida su posición fija, colores, y organización de elementos */
+  }
+  
+  header .icono img {
+    width: 50px; 
+    height: auto; 
+  }
+  header .logo span{
+    color: var(--pink);
+  }
+  
+  header .navbar a{
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #666;
+  }
+  
+  header .navbar a:hover{
+    color: var(--pink)
+  }
+  
+  header .icons a{
+    font-size: 2.5rem;
+    color: #333;
+    margin-left: 1.5rem;
+  }
+  
+  header .icons a:hover{
+  color: var(--pink);
+  }
+  
+  header #toggler{
+    display: none;
+    /* Oculta el toggler */
+  }
+  
+  header .fa-bars{ 
+    font-size: 3rem;
+    color: #333;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0, 0, 0, .3);
+    display: none;
+  }
+  
+  @media (max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+  
+    header {
+        padding: 2rem;
+    }
+  }
+  
+  @media (max-width:768px) {
+    header .fa-bars {
+        display: block;
+    }
+    header .navbar{
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      background: #eee;
+      border-top: .1rem solid rgba(0, 0, 0, .1);
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  
+  header #toggler:checked ~ .navbar{
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  
+  header .navbar a{
+    margin: 1.5rem;
+    padding: 1.5rem;
+    background: #fff;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    display: block;
+  }
+  }
+  @media (max-width:450px){
+  
+    html{
+        font-size: 50%;
+    }
+  }
+  
+  h1{
+    text-align: center;
+    text-transform: none;
+  }
 
 body {
-  /* background-image: url(../src/img/Fondo.webp);*/
-  display: grid;
+  padding-bottom: 50px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
-  grid-template-rows: auto 1fr auto;
+  background: #ffffff;
+  margin: 0;
+  text-transform: none; /* Desactiva la capitalización */
 }
 
-header{
-  min-height: 5vh;
-  padding: 5px;
-  border: 1px solid black;
-  background-color: #f8baa4;
+.container{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
 }
 
-main{
-  margin: 10px;
+.arr{
+background-color: #eee;
+height: 100px;
+width: 100px;
+border-radius: 50%;
+margin: 15px;
+transition: 0.4s ease;
+cursor: pointer;
 }
 
-h1 {
+.arr:hover{
+  box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, .1);
+}
+
+.arr div{
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  border-top: 8px solid #202020;
+  border-left: 8px solid #202020;
+  transform: rotate(45deg);
+  left: 27.5px;
+  top: 35px;
+}
+
+.logo{
+  width: 20%;
+  height: auto;
+  
+}
+img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+}  
+
+.wrapper {
+  width: 420px;
+  background: #f8baa4;
+  color: #000000;
+  border-radius: 10px;
+  padding: 30px 40px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: none; /* Desactiva la capitalización */
+}
+
+.wrapper h1{
+  font-size: 36px;
   text-align: center;
+  text-transform: none; /* Desactiva la capitalización */
 }
 
-form {
-  display: grid;
-
-  grid-template-columns: repeat(2, auto);
-  grid-row-gap: 15px;
-  grid-column-gap: 5px;
-
-  width: 30vw;
-
-  /*El primer valor es margen arriba y abajo, el segundo valor es margen izquierda y derecha */
-  margin: 0 auto;
-  background-color: #f8baa4;
-  padding: 25px;
-  border: 1px solid black;
+.wrapper .input-box{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background: #f8baa4;
+  margin: 30px 0;
+  text-transform: none; /* Desactiva la capitalización */
 }
 
-.button {
-  text-decoration: none;
-  background-color: rgb(125, 153, 60);
-  padding: 10px;
-  color: white;
-  border-radius: 5px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
-  transition: 0.2s all;
+
+.input-box input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 40px;
+  font-size: 16px;
+  color: #000000;
+  padding: 0 45px 0 20px;
+  box-sizing: border-box;
+  outline: none;
+  text-transform: none; /* Desactiva la capitalización */
 }
 
-.button:hover {
-  background-color: black;
-  color: white;
+.input-box label{
+  font-size: 14px;
 }
 
-a {
-  color: black;
+.wrapper p {
+  font-size: 15px; 
+  text-align: center; 
+  color: #333; 
+  margin-top: 10px; 
+  text-transform: none; /* Desactiva la capitalización */
+}
+
+.wrapper .btn {
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+  text-transform: none; /* Desactiva la capitalización */
+}
+
+.input-box input::placeholder{
+  color: #616161;
+}
+
+.input-box i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+.wrapper select{
+  width: 100%;
+    height: 50px;
+    background: transparent; 
+    border: 2px solid #ffffff; 
+    border-radius: 40px; 
+    font-size: 16px; 
+    color: #000000; 
+    padding: 0 20px; 
+    box-sizing: border-box;
+    outline: none;
+    appearance: none; /* Oculta la apariencia nativa del selector */
+    text-transform: none; /* Desactiva la capitalización */
+}
+
+.wrapper select option{
+    background-color: #ffffff; 
+    color: #000000; 
+    font-size: 16px; 
+}
+
+
+
+/* Estilos botón submit */
+.wrapper .submit-btn{
+    width: 100%; 
+    height: 45px;
+    background: #fff; 
+    border: none; 
+    border-radius: 40px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1); 
+    cursor: pointer; 
+    font-size: 16px; 
+    color: #333; 
+    font-weight: 600; 
+    transition: background-color 0.3s; 
+}
+
+.wrapper .submit-btn:hover{
+    background-color: #f572a9; 
+    color: #333; 
 }
 
 footer{
-  background-color: #f8baa4;
-  min-height: 5vh;
+  position: fixed; 
+  background-color: #F8BAA4;
+  color: #333;
   text-align: center;
-  padding: 5px;
-  border: 1px solid black;
+  padding: 5px; 
+  width: 100%;
+  bottom: 0;
+  margin-top: 80px;
+}
+
+footer a {
+color: #333;
+font-size: 1.7rem; 
+margin: 0 10px; 
+}
+
+footer p {
+font-size: 12px; 
+margin-top: 0px; 
+text-transform: none; /* Desactiva la capitalización */
+
+}
+
+footer a:hover {
+color: #e84393; 
 }
