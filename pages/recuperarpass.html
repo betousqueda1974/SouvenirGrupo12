@@ -3,52 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="luxury.png">
+    <link rel="icon" href="src/img/luxury.png">
     <script src="https://kit.fontawesome.com/08cc4eca64.js" crossorigin="anonymous"></script>
     <title>Recuperar Contraseña</title>
     <link rel="stylesheet" href="../styles/recuperarpass.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
 </head>
 
-<header>
-        
-        <nav>
-            <a href="pages/iniciosesion.html" style="display: flex; align-items: center;">
-                <i class="fa fa-crown" style="margin-left: 10px;"></i>
-            </a>
-        </nav>
-    </header>
-</header>
 <body>
+    
+    <header>
+      <!-- Encabezado de la pagina -->
+      <input type="checkbox" name="" id="toggler">
+      <label for="toggler" class="fas fa-bars"></label>
+      
+      <a href="../index.html" class="icono">
+        <img src="../src/img/luxury.png" alt="imagen icono">
+        
+    </a>
+      <nav class="navbar">
+          <!-- Enlaces de navegacion -->
+          <a href="index.html">Inicio</a>
+          <a href="pages/Busqueda.html">Productos</a>
+          <a href="#">Sobre nosotros</a>
+          <a href="#">Promociones</a>
+          <a href="#">Contacto</a>
+          
+      </nav>
+      <div class="icons">
+          <a href="../pages/iniciosesion.html" class="fas fa-user"></a>
+          <!-- Icono de usuario -->
+      </div>
+    </header>
 
-       <img src="logo1.png" alt="Descripción de la imagen"  style="display: block; margin: auto;">
-
-    <h1><br>RECUPERAR CONTRASEÑA</h1>
-    <p align="center">Vamos a enviarte un email para que puedas cambiar tu contraseña.</p><br>
-
+    <br><br><br><br><br><br><br><br>
+<!-- Form -->
+  <div class="wrapper">
     <form action="">
-        <p>Email</p>
-           <br><input type="text" class="field" placeholder="Ingrese su email" required><br/>
-            
-           <p class="center-content">
-           <br><input class="button1" type="submit">
-            <input class="button2" type="reset">
+      <h1>Cambiar contraseña</h1>
+      <p>Vamos a enviarte un email para que puedas cambiar tu contraseña.</p>
+      <div class="input-box">
+        <input type="text" placeholder="Correo electrónico" required>
+        <i class="bx bxs-envelope"></i>
+      </div>
+      <button type="submit" class="btn">Enviar mail</button>
+
+      <div class="register-link">
+        
+      </div>
+      <p><a href="../pages/iniciosesion.html" class="volver">Volver</a></p>
+    </div>
     </form>
-        
-        <a class="button3" href="../index.html">Volver</a>
-        
+  </div>   
 
-<footer>
-
-        <a href="https://www.twitter.com"><i class='bx bxl-twitter'></i></a>
-        <a href="https://www.facebook.com"><i class='bx bxl-facebook-circle'></i></a> 
-        <a href="https://www.pinterest.com"><i class='bx bxl-pinterest'></i></a>
-        <a href="https://www.instagram.com"><i class='bx bxl-instagram'></i></a>
-        <a href="https://www.linkedin.com"><i class='bx bxl-linkedin-square'></i></a>
-        
-        <p>Derechos reservados Souvenir Company</p>
+  <footer>
+  <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+  <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+  <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+  <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+  <p>Todos los derechos reservados @2024</p>
 </footer>
 </body>
 </html>
