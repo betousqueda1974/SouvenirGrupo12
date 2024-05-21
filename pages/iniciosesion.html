@@ -1,49 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Iniciar sesión</title>
-
-  <link rel="stylesheet" href="../styles/iniciosesion.css">
-  <link rel="icon" href="../src/img/LogoSouCom.jpg">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" href="../src/img/luxury.png">
+   <script src="https://kit.fontawesome.com/08cc4eca64.js" crossorigin="anonymous"></script>
+   <title>Iniciar sesión</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <link rel="stylesheet" href="../styles/iniciosesion.css" >
+   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
-  <header></header>
 
-  <main>
-    <br>
-    <a class="button" href="../index.html">Volver</a>
-    <h1>INICIO DE SESION</h1>
-    <p class="TextoComienzo">Ingresá tu usuario y password</p>
-    <p class="TextoComienzo">Si ya sos parte de Souvenir Company ingresá tus datos</p>
-    <br>
-
-    <form action="" method="get">
-      <label for="Ema">Correo electrónico</label>
-      <input id="Ema" type="text" name="Correo" placeholder="Ingrese el correo electrónico" required>
-
-      <label for="Pass">Contraseña</label>
-      <input id="Pass" type="password" name="Password" placeholder="Ingrese contraseña" required>
+<header>
+  <!-- Encabezado de la pagina -->
+  <input type="checkbox" name="" id="toggler">
+  <label for="toggler" class="fas fa-bars"></label>
+  
+  <a href="../index.html" class="icono">
+      <img src="../src/img/luxury.png" alt="imagen icono">
       
-      <input class="button" type="submit">
-      <input class="button" type="reset">
+  </a>
+  <nav class="navbar">
+      <!-- Enlaces de navegacion -->
+      <a href="index.html">Inicio</a>
+      <a href="pages/Busqueda.html">Productos</a>
+      <a href="#">Sobre nosotros</a>
+      <a href="#">Promociones</a>
+      <a href="#">Contacto</a>
+      
+  </nav>
+  <div class="icons">
+      <a href="../pages/iniciosesion.html" class="fas fa-user"></a>
+      <!-- Icono de usuario -->
+  </div>
 
-      <a class="CrearCuenta" href="crearusuario.html">Crear Cuenta</a>
+</header>
+
+<br><br><br><br><br><br><br><br>
+<!-- Form -->
+  <div class="wrapper">
+    <form action="">
+      <h1>Iniciar sesión</h1>
+      <div class="input-box">
+        <input type="text" placeholder="Nombre de usuario"
+        required>
+        <i class="bx bxs-user"></i>
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Contraseña"
+        required>
+        <i class="bx bxs-lock-alt"></i>
+      </div>
+      
+      <div class="remember-forgot">
+        
+        <a href="recuperarpass.html">¿Olvidaste la contraseña?</a>
+      </div>
+
+      <button type="submit" class="btn">Acceder</button>
+
+      <div class="register-link">
+        <p>¿No tenés cuenta? <a href="crearusuario.html" class="crear-cuenta">Crear cuenta</a></p>
+      </div>
+      
+      <p><a href="../index.html" >Volver</a></p>
+
     </form>
-    <br>
-    <a class="Recuperar" href="recuperarpass.html">¿No puedes ingresar a tu cuenta?. Recupera el acceso</a>
-  </main>
-
+  </div>
+  <br><br>
   <footer>
-    <a href="https://www.twitter.com" target="_blank"><i class='bx bxl-twitter'></i></a>
-    <a href="https://www.facebook.com" target="_blank"><i class='bx bxl-facebook-circle'></i></a> 
-    <a href="https://www.pinterest.com" target="_blank"><i class='bx bxl-pinterest'></i></a>
-    <a href="https://www.instagram.com" target="_blank"><i class='bx bxl-instagram'></i></a>
-    <a href="https://www.linkedin.com" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
-    <p>Derechos reservados Souvenir Company</p>
-  </footer>
+    <!-- Pie de página -->
+    <br>
+    <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+    <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+    <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    <p>Todos los derechos reservados @2024</p>
+</footer>
+
 </body>
 </html>
