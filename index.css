@@ -1,22 +1,28 @@
 :root{
     --pink: #e84393;
+    /* Define la variable CSS para el color rosa */
 }
 
 * {
     margin: 0; padding: 0;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     outline: none; border: none;
     text-decoration: none;
     text-transform: capitalize;
     transition: .2s linear;
+    text-transform: none; /* Desactiva la capitalización */
+
+    /* Restablece los márgenes y estilos predeterminados, establece la fuente y otras propiedades globales */
 }
 
 html{
     font-size: 62.5%;
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
-    overflow-x: hidden;  
+    overflow-x: hidden; 
+
+    /* Define el tamaño de fuente base, comportamiento de desplazamiento suave y otros ajustes */ 
 }
 
 header{
@@ -30,13 +36,13 @@ header{
     box-shadow: 0 .5rem 1 rem rgba(0, 0, 0, .1);
     justify-content: space-between;
 
+    /* Establece estilos para el encabezado, su posición fija, colores, y organización de elementos */
 }
 
-header .logo{
-    font-size: 3rem;
-    color: white;
-    font-weight: bolder;
-}
+header .icono img {
+    width: 50px; 
+    height: auto; 
+  }
 
 header .logo span{
     color: var(--pink);
@@ -46,31 +52,27 @@ header .navbar a{
     font-size: 2rem;
     padding: 0 1.5rem;
     color: #666;
-
 }
 
 header .navbar a:hover{
     color: var(--pink)
-
 }
 
 header .icons a{
     font-size: 2.5rem;
     color: #333;
     margin-left: 1.5rem;
-
 }
 
 header .icons a:hover{
 color: var(--pink);
-
 }
 
 header #toggler{
     display: none;
 }
-
-header .fa-bars{
+/*
+header .fa-bars{ 
     font-size: 3rem;
     color: #333;
     border-radius: .5rem;
@@ -78,24 +80,22 @@ header .fa-bars{
     cursor: pointer;
     border: .1rem solid rgba(0, 0, 0, .3);
     display: none;
-
+     Estilos para el botón de barra en el encabezado 
 }
-
-
-@media (max-width:991px){
-
-    html{
-        font-size: 55%;
+*/
+@media (max-width:991px) {
+    html {
+        font-size: 1rem;
     }
 
-    header{
+    header {
         padding: 2rem;
     }
 }
 
-@media (max-width:768px){
+@media (max-width:768px) {
 
-    header .fa-bars{
+    header .fa-bars {
         display: block;
     }
 
@@ -105,15 +105,13 @@ header .fa-bars{
         background: #eee;
         border-top: .1rem solid rgba(0, 0, 0, .1);
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        
 
     }
 
     header #toggler:checked ~ .navbar{
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
-
-
-
 
     header .navbar a{
         margin: 1.5rem;
@@ -123,6 +121,9 @@ header .fa-bars{
         display: block;
     }
 
+    .open-btn {
+        display: none; 
+    }
 }
 
 @media (max-width:450px){
@@ -132,19 +133,73 @@ header .fa-bars{
     }
 }
 
-
-
-
-
-
-
-
-
+h1{
+    text-align: center;
+}
 
 
 body {
     margin: 0 auto;
-    background-color: #ffffff;  
+    background-color: white;
+}
+
+#sidebar-toggle {
+    display: none;
+}
+
+/* Estilos botón del sidebar */
+.open-btn {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; 
+    width: 250px;
+    height: 100%;
+    background-color: #f8baa4;
+    transition: left 0.3s ease; 
+    z-index: 1000; 
+}
+
+
+.sidebar a {
+    display: block;
+    padding: 15px 20px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease; 
+}
+
+.sidebar a:hover {
+    background-color: #e84393; 
+}
+
+/* Estilos para mostrar la barra lateral cuando el input checkbox está marcado */
+#sidebar-toggle:checked + .sidebar {
+    left: 0;
+}
+
+.sidebar.active {
+    left: 0; /* Muestra el sidebar cuando está activo */
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;   
+    cursor: pointer;
+  }
+
+
+/* Estilos del sidebar en pantallas más chicas */
+@media (max-width: 768px) {
+    .sidebar {
+        left: 0; 
+    }
 }
 
 .container-items{
@@ -180,7 +235,7 @@ body {
 }
 
 .item:hover img {
-    transform: scale(1.1); /* Escala la imagen al 110% de su tamaño original */
+    transform: scale(1.1); 
 }
 
 .item figure{
@@ -210,7 +265,7 @@ body {
 
 
 .logo{
-    width: 20%; /* Ajusta la imagen al ancho del contenedor */
+    width: 20%;
     height: auto;
     
 }
@@ -218,32 +273,12 @@ img {
     display: block;
     margin: auto;
     max-width: 100%;
-}    
-
-.banner{
-    text-align: center; /* Centra los botones horizontalmente */
-    margin-top: 20px; /* Espacio entre la imagen y el banner */
-
-}
-.button {
-    display: inline-block; /* Los botones se alinean uno al lado del otro */
-    margin: 10px; /* Espacio entre los botones */
-    padding: 10px 20px; /* Espaciado interno de los botones */
-    background-color: #F8BAA4; /* Color de fondo de los botones */
-    color: black; /* Color del texto en los botones */
-    text-decoration: none; /* Elimina la subrayado del texto */
-    border-radius: 5px; /* Bordes redondeados */
-    transition: background-color 0.2s; /* Transición de color de fondo */
-}
-.button:hover {
-    background-color: palevioletred
-
-}
+}  
 
 .slider-box{
-    width: 50%; /* Ajusta según el diseño de tu página */
-    margin: auto; /* Centra el carrusel horizontalmente */
-    overflow: hidden; /* Oculta las imágenes que no están en la vista */
+    width: 50%; 
+    margin: auto; 
+    overflow: hidden; 
 
 }
 
@@ -294,16 +329,29 @@ main {
     .slider-box{
         width: 100%;
     }  
-
-
+    
 }
 footer{
         background-color: #F8BAA4;
-        color: white;
+        color: #333;
         text-align: center;
         margin-top: 20px;
-        
+        width: 100%;
 
+    }
 
+    footer a {
+        color: #333;
+        font-size: 2rem; 
+        margin: 0 10px; 
+    }
+    
+    footer p {
+        font-size: 1.5rem; 
+        margin-top: 10px; 
+        text-transform: none; /* Desactiva la capitalización */
 
+    }   
+    footer a:hover {
+        color: #e84393; 
     }
