@@ -1,120 +1,317 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-header{
-    display: flex;
-    justify-content: space-between;
-    background-color: #f8baa4;
-    color: white;
-    min-height: 5vh;
-    padding: 5px;
-    border: 1px solid #f8baa4;
-}
-body {
-    margin: 0 auto;
-    background-color: white;
+:root{
+    --pink: #e84393;
+      /* Define la variable CSS para el color rosa */
+    }
     
-}
-.logo{
-    width: 20%; /* Ajusta la imagen al ancho del contenedor */
-    height: auto;
+    * {
+        margin: 0; padding: 0;
+        box-sizing: border-box;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        outline: none; border: none;
+        text-decoration: none;
+        text-transform: capitalize;
+        transition: .2s linear;
+        text-transform: none; /* Desactiva la capitalización */
+
+        /* Restablece los márgenes y estilos predeterminados, establece la fuente y otras propiedades globales */
+    }
     
+    html{
+      font-size: 62.5%;
+      scroll-behavior: smooth;
+      scroll-padding-top: 6rem;
+      overflow-x: hidden; 
+      /* Define el tamaño de fuente base, comportamiento de desplazamiento suave y otros ajustes */ 
+    }
+    
+    header{
+      margin-bottom: 20px; 
+
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: #f8baa4;
+      padding: 2rem 9%;
+      display: flex;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0.5rem 1 rem rgba(0, 0, 0, .1);
+      justify-content: space-between;
+      
+      /* Establece estilos para el encabezado, incluida su posición fija, colores, y organización de elementos */
+    }
+
+    header .icono img {
+      width: 50px; 
+      height: auto; 
+    }
+    
+    header .logo span{
+      color: var(--pink);
+    }
+    
+    header .navbar a{
+      font-size: 2rem;
+      padding: 0 1.5rem;
+      color: #666;
+    }
+    
+    header .navbar a:hover{
+      color: var(--pink)
+    }
+    
+    header .icons a{
+      font-size: 2.5rem;
+      color: #333;
+      margin-left: 1.5rem;
+    }
+    
+    header .icons a:hover{
+    color: var(--pink);
+    }
+    
+    header #toggler{
+      display: none;
+      /* Oculta el toggler */
+    }
+    
+    header .fa-bars{ 
+      font-size: 3rem;
+      color: #333;
+      border-radius: .5rem;
+      padding: .5rem 1.5rem;
+      cursor: pointer;
+      border: .1rem solid rgba(0, 0, 0, .3);
+      display: none;
+    }
+    
+    @media (max-width:991px) {
+      html {
+          font-size: 55%;
+      }
+    
+      header {
+          padding: 2rem;
+      }
+    }
+    
+    @media (max-width:768px) {
+      header .fa-bars {
+          display: block;
+      }
+      header .navbar{
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        background: #eee;
+        border-top: .1rem solid rgba(0, 0, 0, .1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    
+    header #toggler:checked ~ .navbar{
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      /* Cambia la forma de la barra de navegación cuando se activa el toggler */
+    }
+    
+    header .navbar a{
+      margin: 1.5rem;
+      padding: 1.5rem;
+      background: #fff;
+      border: .1rem solid rgba(0, 0, 0, .1);
+      display: block;
+    }
+    }
+    @media (max-width:450px){
+    
+      html{
+          font-size: 50%;
+      }
+    }
+    
+    h1{
+      text-align: center;
+      text-transform: none; /* Desactiva la capitalización */
+
+    }
+
+    body {
+      padding-bottom: 90px; 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: white;
+      margin: 0;
+    }
+
+    .container{
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: white;
+    }
+
+.arr{
+  background-color: #eee;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin: 15px;
+  transition: 0.4s ease;
+  cursor: pointer;
 }
 
-main {
-    margin: 20px;
+.arr:hover{
+  box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, .1);
 }
 
-h1 {
-    text-align: center;
-    image-orientation: center;
+.arr div{
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  border-top: 8px solid #202020;
+  border-left: 8px solid #202020;
+  transform: rotate(45deg);
+  left: 27.5px;
+  top: 35px;
 }
+    .logo{
+      width: 20%;
+      height: auto;
+      
+    }
+    img {
+      display: block;
+      margin: auto;
+      max-width: 100%;
+    }  
+    
+    .wrapper {
+      width: 420px;
+      background: #f8baa4;
+      color: #000000;
+      border-radius: 10px;
+      padding: 30px 40px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .wrapper h1{
+      font-size: 36px;
+      text-align: center;
+      text-transform: none; /* Desactiva la capitalización */
+    }
+    
+    .wrapper .input-box{
+      position: relative;
+      width: 100%;
+      height: 50px;
+      background: #f8baa4;
+      margin: 30px 0;
+    }
+    
+    .input-box input{
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      border: 2px solid #ffffff;
+      border-radius: 40px;
+      font-size: 16px;
+      color: #000000;
+      padding: 0 45px 0 20px;
+      box-sizing: border-box;
+      outline: none;
+    }
 
-form {
- 
-    grid-template-columns: repeat(2, auto);
-    grid-row-gap: 15px;
-    grid-column-gap: 5px;
-    width: 300px;
-    color: black;
-    font-size: 1em;
-    border-radius: 3px;
-    margin: 0 auto;
-    background-color: white;
-    padding: 10px;
-}
-.field{
-    border: solid 1px #ccc;
-    padding: 10px;
-    width: 280px;
-}
+    .wrapper p {
+        font-size: 15px; 
+        text-align: center; 
+        color: #333; 
+        margin-top: 10px; 
+        text-transform: none; /* Desactiva la capitalización */
+    }
+    
+    .wrapper .btn {
+      width: 100%;
+      height: 45px;
+      background: #fff;
+      border: none;
+      outline: none;
+      border-radius: 40px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+      cursor: pointer;
+      font-size: 16px;
+      color: #333;
+      font-weight: 600;
+      text-transform: none; /* Desactiva la capitalización */
+    }
+    
+    .input-box input::placeholder{
+      color: #616161;
+    }
+    
+    .input-box i {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 20px;
+    }
+    
+    /* Estilos botón submit */
+    .input-box button[type="submit"],
+    .wrapper .btn {
+        width: 100%; 
+        height: 45px; 
+        background: #fff; 
+        border: none; 
+        border-radius: 40px; 
+        box-shadow: 0 0 10px rgba(0, 0, 0, .1); 
+        cursor: pointer; 
+        font-size: 16px; 
+        color: #333; 
+        font-weight: 600; 
+        transition: background-color 0.3s; 
+    }
+    
+    .input-box button[type="submit"]:hover,
+    .wrapper .btn:hover {
+        background-color: #f572a9; 
+        color: #333; 
+        
+    }
 
-.field :focus{
-    border-color: black;
-}
+    .register-link p a.volver{
+      color: #ffffff;
+      font-weight: normal;
+      text-decoration: none;
+    }
 
-.center-content{
-    text-align: center;
-
-}
-
-.button1 {
-    display: inline-block;
-    text-decoration: none;
-    background-color: white;
-    padding: 10px 20px;
-    color: black;
-    text-decoration: none;
-    border-radius: 7px;
-    border-color: #f8baa4;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
-    transition: background-color 0.2s;
-}
-.button1:hover {
-    background-color: #f8baa4;
-}
-
-.button2 {
-    display: inline-block;
-    text-decoration: none;
-    background-color: white;
-    padding: 10px 20px;
-    color: black;
-    text-decoration: none;
-    border-radius: 7px;
-    border-color: #f8baa4;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
-    transition: background-color 0.2s;
-}
-.button2:hover {
-    background-color: #f8baa4;
-}
-
-.button3 {
-    text-decoration: none;
-   background-color: #f8baa4;
-    padding: 10px;
-    z-index: 10;
-    color: black;
-    position: fixed; 
-    top: 90px; 
-    left: 10px;
-    border-radius: 5px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
-    transition: background-color 0.2s;
-}
-.button3:hover {
-    background-color: palevioletred
-}
-
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #f8baa4;
-    min-height: 5vh;
-    text-align: center;
-    padding: 5px;
-    border: 1px solid black;
-}
+    footer{
+      position: fixed;
+      background-color: #F8BAA4;
+      color: #333;
+      text-align: center;
+      padding: 5px; 
+      width: 100%;
+      bottom: 0;
+    }
+    
+    footer a {
+    color: #333;
+    font-size: 1.7rem; 
+    margin: 0 10px; 
+    }
+    
+    footer p {
+    font-size: 12px; 
+    margin-top: 0px; 
+    text-transform: none; /* Desactiva la capitalización */
+    }
+    
+    footer a:hover {
+    color: #e84393; 
+    }
