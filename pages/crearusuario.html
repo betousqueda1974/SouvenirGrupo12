@@ -1,66 +1,116 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crear Usuario</title>
-
-  <link rel="stylesheet" href="../styles/crearusuario.css">
-  <link rel="icon" href="../src/img/LogoSouCom.jpg">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../src/img/luxury.png">
+    <script src="https://kit.fontawesome.com/08cc4eca64.js" crossorigin="anonymous"></script>
+    <title>Crear usuario</title>
+    <link rel="stylesheet" href="../styles/crearusuario.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
-  <header></header>
-
-  <main>
-    <br>
-    <a class="button" href="iniciosesion.html">Volver</a>
-    <h1>USUARIO NUEVO</h1>
   
+<header>
+  <!-- Encabezado de la página -->
+<input type="checkbox" name="" id="toggler">
+<label for="toggler" class="fas fa-bars"></label>
+<a href="index.html" class="icono">
+  <a href="../index.html" class="icono">
+    <img src="../src/img/luxury.png" alt="imagen icono">
+</a>
+<nav class="navbar">
+    <!-- Enlaces de navegación -->
+    <a href="../index.html">Inicio</a>
+    <a href="../pages/Busqueda.html">Productos</a>
+    <a href="#">Sobre nosotros</a>
+    <a href="#">Promociones</a>
+    <a href="#">Contacto</a>
+    
+</nav>
+<div class="icons">
+    <a href="../pages/iniciosesion.html" class="fas fa-user"></a>
+    <!-- Icono de usuario -->
+</div>
+</header>
+<br><br><br><br><br><br><br><br>
+<!-- Form -->
+  <div class="wrapper">
     <form action="" method="get">
+      <h1>Crear usuario</h1>
+       
+      <div class="input-box">
+        <label for="NomUsu">Nombre</label>
+        <input id="NomUsu" type="text" name="NombreUsuario" placeholder="Ingrese su nombre" required>
+       </div>
 
-      <label for="NomUsu">Nombre</label>
-      <input id="NomUsu" type="text" name="NombreUsuario" placeholder="Ingrese nombre" required>
+       <div class="input-box">
+        <label for="Ape">Apellido</label>
+        <input id="Ape" type="text" name="Apellido" placeholder="Ingrese su apellido" required>
+       </div>
 
-      <label for="Ape">Apellido</label>
-      <input id="Ape" type="text" name="Apellido" placeholder="Ingrese apellido" required>
+       <div class="input-box">
+        <label for="TipDoc">Tipo Documento</label>
+        <select name="TipoDocumento" id="TipDoc">
+          <option value="DNI">DNI</option>
+          <option value="Pasaporte">Pasaporte</option>
+          <option value="Otros">Otros</option>
+        </select>
+       </div>
+  
+       <div class="input-box">
+        <label for="dni">Documento</label>
+        <input id="dni" type="text" name="DNI" placeholder="Ingrese su N° de documento" required>
+       </div>
 
-      <label for="TipDoc">Tipo Documento</label>
-      <select name="TipoDocumento" id="TipDoc">
-        <option value="DNI">DNI</option>
-        <option value="Pasaporte">Pasaporte</option>
-        <option value="Otros">Otros</option>
-      </select>
+       <div class="input-box">
+        <label for="Ema">E-mail</label>
+        <input id="Ema" type="text" name="E-mail" placeholder="Ingrese su correo electrónico" required>
+       </div>
 
-      <label for="dni">Documento</label>
-      <input id="dni" type="text" name="DNI" placeholder="Ingrese documento" required>
+       
+       <div class="input-box">
+        <label for="Pas">Contraseña</label>
+        <input id="Pas" type="password" name="Contraseña" placeholder="Ingrese su contraseña" required>
+       </div>
 
-      <label for="Ema">E-mail</label>
-      <input id="Ema" type="text" name="E-mail" placeholder="Ingrese correo electrónico" requerid>
+       <div class="input-box">
+        <label for="PasRep">Confirme contraseña</label>
+        <input id="PasRep" type="password" name="Reingrese contraseña" placeholder="Ingrese contraseña" requerid>
+      </div>
+      
+        <div class="input-box">
+            <label for="FechaNac">Fecha de Nacimiento</label>
+            <input id="FechaNac" type="date" name="FechaNacimiento" required>
 
-      <label for="Pas">Contraseña</label>
-      <input id="Pas" type="text" name="Contraseña" placeholder="Ingrese contraseña" requerid>
+        </div>
 
-      <label for="PasRep">Ingrese nuevamente contraseña</label>
-      <input id="PasRep" type="text" name="Reingrese contraseña" placeholder="Ingrese contraseña" requerid>
+       <div class="input-box">
+        <label for="Tel">Teléfono</label>
+        <input id="Tel" type="text" name="Telefono" placeholder="Ingrese un teléfono">
+       </div>
 
-      <label for="Tel">Teléfono</label>
-      <input id="Tel" type="number" name="Telefono" placeholder="Ingrese telefono">
+        <input class="btn submit-btn" type="submit" > <br><br>
+        <input class="btn submit-btn" type="reset" > 
+        <!-- Boton volver -->
+        <p><a href="../pages/iniciosesion.html" >Volver</a></p>
 
-      <input class="button" type="submit">
-      <input class="button" type="reset">
-    </form>
-  </main>
+      </form>
+    </div>
+    <br><br><br>
 
   <footer>
-    <a href="https://www.twitter.com"><i class='bx bxl-twitter'></i></a>
-    <a href="https://www.facebook.com"><i class='bx bxl-facebook-circle'></i></a> 
-    <a href="https://www.pinterest.com"><i class='bx bxl-pinterest'></i></a>
-    <a href="https://www.instagram.com"><i class='bx bxl-instagram'></i></a>
-    <a href="https://www.linkedin.com"><i class='bx bxl-linkedin-square'></i></a>
-    <p>Derechos reservados Souvenir Company</p>
-  </footer>
+    <!-- Pie de pagina -->
+    <br>
+    <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+    <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+    <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    <p>Todos los derechos reservados @2024</p>
+</footer>
 
+ 
 </body>
 </html>
