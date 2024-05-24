@@ -1,44 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alta de nuevo Producto</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alta de producto</title>
+  <link rel="stylesheet" href="../styles/AltaProducto.css">
+  <link rel="icon" href="../src/img/luxury.png">
+  <script src="https://kit.fontawesome.com/08cc4eca64.js" crossorigin="anonymous"></script>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 </head>
+
 <body>
-    <h1>Agregar Producto a la tienda</h1>
-    <form action=""> 
-     <label for="idprod">Còdigo de Producto</label><br>
-     <input type="text" name="idprod" required placeholder="Còdigo del producto"> <br>
-     <label for="nombrepro">Nombre del Producto</label><br>
-     <input type="text" name="nombreprod" placeholder="Nombre del Producto" required> <br>
-        <h3>Tipo de producto</h3>
-        <label for="denario">denario</label>
-        <input type="radio" name="tipo" id="denario" value="denario">
-        <label for="llavero">llavero</label>
-        <input type="radio" name="tipo" id="llavero" value="llavero">
-        <label for="accesorio">accesorio</label>
-        <input type="radio" name="tipo" id="accesorio" value="accesorio"> 
-        <label for="otro">otro</label>
-        <input type="radio" name="tipo" id="otro" value="otro"> 
-        <br>
-     <br>
-     <label for="descrip">Descripciòn del producto</label><br>
-     <textarea name="descrip" id="descrip" cols="30" rows="5" placeholder="Ingresa la descripcòn del producto como el tipo de materiales,  color, medidas, etc." required></textarea><br><br>
-     <input type="submit" value="Subir foto" required>
-     <img src="" alt="Foto producto"><br><br><br>
-     <label for="precio">Precio al Pùblico</label><br>
-     <input type="number" name="precio" placeholder="Ingresa precio por unidad" required> <br>
-     <label for="stock">Unidades en stock</label><br>
-     <input type="number" name="stock" placeholder="cantidad de unidades" required> <br><br>
-     <input type="submit" value="Aceptar">
-     <input type="submit" value="Cancelar">
-    </form>
-    <br>
-<footer> 
-    <a href="Editar.html">Menú de Productos</a>  
-    <a href="">Ir al inicio</a>
-</footer>
+  <header>
     
+    <!-- Encabezado de la pagina -->
+    <input type="checkbox" name="" id="toggler">
+    <label for="toggler" class="fas fa-bars"></label>
+    
+    <a href="../index.html" class="icono">
+      <img src="../src/img/luxury.png" alt="imagen icono">
+      
+  </a>
+    <nav class="navbar">
+        <!-- Enlaces de navegacion -->
+        <a href="index.html">Inicio</a>
+        <a href="pages/Busqueda.html">Productos</a>
+        <a href="#">Sobre nosotros</a>
+        <a href="#">Promociones</a>
+        <a href="#">Contacto</a>
+        
+    </nav>
+    <div class="icons">
+        <a href="../pages/iniciosesion.html" class="fas fa-user"></a>
+        <!-- Icono de usuario -->
+    </div>
+  </header>
+  <br><br><br><br><br><br><br><br>
+
+  <div class="wrapper">
+    <form action="" method="get">
+    <h1>Alta de nuevo Producto</h1>
+  
+    <div class="input-box">
+      <label for="codigo">Código de producto</label>
+      <input id="codigo" type="text" name="codigo" placeholder="Ingrese código de producto" required>
+     </div>
+
+     <div class="input-box">
+      <label for="descrip">Descripción del producto</label>
+      <input id="descrip" type="text" name="descrip" placeholder="Ingrese descripción del producto" required>
+     </div>
+     
+          
+     <div class="opciones">
+      <label class="radio">
+      <label for="tipo">Tipo de producto</label><br><br>
+    </label>
+
+    <label class="radio">
+      <input type="radio" value="llavero" name="opciones">
+      Llavero
+      <span></span>
+    </label>
+
+    <label class="radio">
+      <input type="radio" value="maceta" name="opciones">
+      Maceta
+      <span></span>
+    </label>
+
+    <label class="radio">
+      <input type="radio" value="adorno" name="opciones">
+      Adorno
+      <span></span>
+    </label>
+
+    <label class="radio">
+      <input type="radio" value="vela" name="opciones">
+      Vela
+      <span></span>
+    </label>
+
+    <label class="radio">
+      <input type="radio" value="otros" name="opciones">
+      Otros
+      <span></span>
+    </label>
+      </div>
+      
+       <div class="input-box">
+        <label for="precio">Precio de venta</label>
+        <input id="precio" type="text" name="precio" placeholder="Ingrese precio" required>
+       </div>
+
+       <div class="input-box">
+        <label for="stock">Cantidad en stock</label>
+        <input id="stock" type="number" name="stock" placeholder="Ingrese unidades en stock" required>
+       </div>
+
+       <input class="btn submit-btn" type="submit" value="Aceptar"> <br><br>
+       <input class="btn submit-btn" type="reset" value="Cancelar"> 
+
+       <p><a href="../pages/Editar.html" >Volver</a></p>
+    </form>
+</div>
+ 
+
+  <br><br><br><br><br>
+  <footer>
+  
+    <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+    <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+    <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    <p>Todos los derechos reservados @2024</p>
+  </footer>
 </body>
 </html>
