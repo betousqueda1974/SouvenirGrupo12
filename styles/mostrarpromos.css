@@ -1,0 +1,206 @@
+:root{
+  --pink: #e84393;
+    /* Define la variable CSS para el color rosa */
+  }
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+    text-transform: none;   /*Desactiva la capitalización */
+
+    /* Restablece los márgenes y estilos predeterminados, establece la fuente y otras propiedades globales */
+}
+
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  overflow-x: hidden;
+  text-transform: none; /* Desactiva la capitalización */
+  /* Define el tamaño de fuente base, comportamiento de desplazamiento suave y otros ajustes */
+}
+
+header{
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: #f8baa4;
+  padding: 2rem 9%;
+  display: flex;
+  align-items: center;
+  z-index: 1000;*/
+  box-shadow: 0.5rem 1 rem rgba(0, 0, 0, .1);
+  justify-content: space-between;
+  /* Establece estilos para el encabezado, su posición fija, colores, y organización de elementos */
+}
+
+header .icono img {
+  width: 50px; 
+  height: auto; 
+}
+
+header .navbar a{
+  font-size: 2rem;
+  padding: 0 1.5rem;
+  color: #666;
+}
+
+header .navbar a:hover{
+  color: var(--pink)
+}
+
+/*PARA QUE ESTA ESTO??? ESTO ES PARA LAS MEDIAS QUERY PARA QUE SE VEA EL MENU LATERAL CUANDO SE ACHICA*/
+header #toggler{
+  display: none;
+   /*Oculta el toggler S */
+}
+
+main{
+  padding-top: 100px;
+}
+
+h2{
+  position: relative;
+  left: 30%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+ul {
+  display: flex;
+  padding-left: 0;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}
+
+li {
+  list-style-type: none;
+  background-color: brown;
+  border: 1px solid black;
+  color: white;
+  font-size:medium;
+  padding: 5px;
+  width: 300px;
+  height: 50px;
+}
+
+h3{
+  position: relative;
+  left: 35%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#Caja{
+  /*
+  min-height: 100vh;
+  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+article{
+  padding: 25px;
+  background-color: brown;
+  border-radius: 25px;
+  margin: 10px;
+  width: 150px;
+  height: 240px;
+  color: white;
+}
+
+article img{
+  border-radius: 999px;
+  background-color: #f8baa4;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  width: 420px;
+  background: #f8baa4;
+  color: #000000;
+  border-radius: 10px;
+  padding: 30px 40px;
+  margin: auto;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: none; /* Desactiva la capitalización */
+}
+
+.wrapper .input-box{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background: #f8baa4;
+  margin: 30px 0;
+}
+
+.input-box input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 40px;
+  font-size: 16px;
+  color: #000000;
+  padding: 0 45px 0 20px;
+  /*ES NECESARIO ESTO???*/
+  box-sizing: border-box;
+  outline: none;
+  /*ES NECESARIO ESTO???*/
+  text-transform: none; /* Desactiva la capitalización */
+}
+
+.input-box label{
+  font-size: 14px;
+}
+
+.button {
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+  text-transform: none; /* Desactiva la capitalización */
+}
+
+footer{
+  margin-top: 10px;
+  text-transform: none; /* Desactiva la capitalización */
+  background-color: #F8BAA4;
+  color: #333;
+  text-align: center;
+  padding: 5px; 
+  width: 100%;
+  bottom: 0;
+}
+
+footer a {
+color: #333;
+font-size: 1.7rem; 
+margin: 0 10px; 
+}
+
+footer p {
+font-size: 12px; 
+margin-top: 0px; 
+text-transform: none; /* Desactiva la capitalización */
+
+}
+footer a:hover {
+color: #e84393; 
+}
