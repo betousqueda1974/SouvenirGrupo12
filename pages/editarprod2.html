@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Producto</title>
+  <link rel="stylesheet" href="../styles/estiloprod2.css">
+  <link rel="icon" href="../src/img/luxury.png">
+  <script src="https://kit.fontawesome.com/08cc4eca64.js" crossorigin="anonymous"></script>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script type="text/javascript">
+    function ConfirmEdition() {
+     var respuesta=confirm ("Confirma la edición?")
+        if (respuesta==true) {
+           return true;
+        }
+        else {
+           return false;
+        }
+   }
+   </script>
+
+</head>
+
+<body>
+  <header>
+    
+    <!-- Encabezado de la pagina -->
+    <input type="checkbox" name="" id="toggler">
+    <label for="toggler" class="fas fa-bars"></label>
+    
+    <a href="../index.html" class="icono">
+      <img src="../src/img/luxury.png" alt="imagen icono">
+      
+  </a>
+    <nav class="navbar">
+        <!-- Enlaces de navegacion -->
+        <a href="../index.html">Inicio</a>
+        <a href="listadodeproductos.html">Productos</a>
+        <a href="sobrenosotros.html">Sobre nosotros</a>
+        <a href="mostrarpromos.html">Promociones</a>
+        <a href="formulariocontacto.html">Contacto</a>
+        
+    </nav>
+    <div class="icons">
+        <a href="../pages/iniciosesion.html" class="fas fa-user"></a>
+        <!-- Icono de usuario -->
+    </div>
+  </header>
+  <br><br><br><br><br><br><br><br>
+
+  <div class="wrapper">
+    <form action="" method="get">
+    <h1>Editar Producto</h1>
+  
+    <div class="input-box">
+      <p><strong>Código de producto:###</strong></p><br>
+      <label for="nombrepro">Nombre de producto:</label>
+      <input id="nombreprod" type="text" name="nombreprod" placeholder="Editar nombre de producto">
+     </div>
+     <br>
+
+     <div class="input-box">
+      <label for="descrip">Descripción del producto:</label>
+      <input id="descrip" type="text" name="descrip" placeholder="Editar descripción del producto">
+     </div>
+     <div class="opciones">
+      <label class="radio">
+      <label for="tipo">Editar tipo de producto:</label><br><br>
+    </label>
+
+    <label class="radio">
+      <input type="radio" value="llavero" name="opciones">
+      Llavero
+      <span></span>
+    </label>
+
+    <label class="radio">
+      <input type="radio" value="maceta" name="opciones">
+      Maceta
+      <span></span>
+    </label>
+
+    <label class="radio">
+      <input type="radio" value="adorno" name="opciones">
+      Adorno
+      <span></span>
+    </label>
+
+    <label class="radio">
+      <input type="radio" value="vela" name="opciones">
+      Vela
+      <span></span>
+    </label>
+
+    <label class="radio">
+      <input type="radio" value="otros" name="opciones">
+      Otros
+      <span></span>
+    </label>
+      </div>
+      
+       <div class="input-box">
+        <label for="precio">Precio de venta:</label>
+        <input id="precio" type="text" name="precio" placeholder="Editar precio">
+       </div>
+
+       <div class="input-box">
+        <label for="stock">Cantidad en stock:</label>
+        <input id="stock" type="number" name="stock" placeholder="Editar unidades en stock">
+       </div>
+
+       <input class="btn submit-btn" type="submit" value="Aceptar" onclick="ConfirmEdition();"> <br><br>
+       <input class="btn submit-btn" type="reset" value="Cancelar"> 
+
+       <p><a href="listadodeproductos.html" >Volver</a></p>
+    </form>
+</div>
+ 
+
+  <br><br><br><br><br>
+  <footer>
+  
+    <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+    <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+    <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    <p>Todos los derechos reservados @2024</p>
+  </footer>
+</body>
+</html>

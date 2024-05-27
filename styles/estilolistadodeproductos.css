@@ -1,0 +1,234 @@
+   * {
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    font-size: medium;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  }
+  html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden; 
+    /* Define el tamaño de fuente base, comportamiento de desplazamiento suave y otros ajustes */ 
+  }
+ 
+  header{
+    text-decoration: none;
+    margin-bottom: 20px; 
+    position: fixed; 
+    top: 0; left: 0; right: 0;
+    background: #f8baa4;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0.5rem 1 rem rgba(0, 0, 0, .1);
+    justify-content: space-between;
+    
+    /* Establece estilos para el encabezado, incluida su posición fija, colores, y organización de elementos */
+  }
+  
+  header .icono img {
+    width: 50px; 
+    height: auto; 
+  }
+  
+  header .logo span{
+    color: var(--pink);
+  }
+  
+  header .navbar a{
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #666;
+    text-decoration: none;
+  }
+  
+  header .navbar a:hover{
+    color: var(--pink)
+  }
+  
+  header .icons a{
+    font-size: 2.5rem;
+    color: #333;
+    margin-left: 1.5rem;
+  }
+  
+  header .icons a:hover{
+  color: var(--pink);
+  }
+  
+  header #toggler{
+    display: none;
+    /* Oculta el toggler */
+  }
+  
+  header .fa-bars{ 
+    font-size: 3rem;
+    color: #333;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0, 0, 0, .3);
+    display: none;
+  }
+  
+@media (max-width:991px) {
+  html {
+      font-size: 55%;
+  }
+
+  header {
+      padding: 2rem;
+  }
+}
+
+@media (max-width:768px) {
+  header .fa-bars {
+      display: block;
+  }
+  header .navbar{
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    background: #eee;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+header #toggler:checked ~ .navbar{
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  /* Cambia la forma de la barra de navegación cuando se activa el toggler */
+}
+
+header .navbar a{
+  margin: 1.5rem;
+  padding: 1.5rem;
+  background: #fff;
+  border: .1rem solid rgba(0, 0, 0, .1);
+  display: block;
+}
+}
+.enlace {
+  background-color: #ffffff;
+  display:inline-flex;
+  padding: 10px;
+  height: 25px;
+  
+}
+.enlace a {
+  text-decoration: none;
+  width: 100%;
+  height: 25px;
+  background: #f8baa4; 
+  padding: 15px 15px 10px 15px;
+  border: 10px; 
+  border-radius: 40px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1); 
+  cursor: pointer; 
+  font-size: 16px; 
+  color: #333; 
+  font-weight: 600; 
+  transition: background-color 0.3s; 
+
+}
+.enlace2 {
+  background-color: #ffffff;
+  display:inline-flex;
+  width: 10%;
+  padding: 2px 30px 17px 30px;
+  border-radius: 40px;
+  height: 25px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.enlace2 a {
+  text-decoration: none;
+  padding: 10px;
+  background: #fff;
+  border: none; 
+  border-radius: 40px;  
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1); 
+  cursor: pointer; 
+  font-size: 16px; 
+  color: #333; 
+  font-weight: 600; 
+  transition: background-color 0.3s;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@media (max-width:450px){
+
+  html{
+      font-size: 50%;
+  }
+}
+
+h1{
+  text-align: center;
+  text-transform: none; /* Desactiva la capitalización */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+   .grid-item {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #f8baa4;
+    margin: 10px;
+    padding: 10px;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    width:46%;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: inline-block;
+   }
+   img {
+    max-width: 150px; /* Tamaño máximo de la imagen */
+    height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+    float: left; /* Alinear la imagen a la izquierda */
+    margin-right: 20px; /* Agregar un poco de espacio entre la imagen y el texto */
+    margin-bottom: 20px; /* Agregar un poco de espacio debajo de la imagen */
+    }
+
+      .btn-enviar {
+          width: 20%; 
+          height: 45px;
+          background: #fff; 
+          border: none; 
+          border-radius: 40px; 
+          box-shadow: 0 0 10px rgba(0, 0, 0, .1); 
+          cursor: pointer; 
+          font-size: 16px; 
+          color: #333; 
+          font-weight: 600; 
+          transition: background-color 0.3s; 
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+
+      footer{
+        position: fixed; 
+        background-color: #F8BAA4;
+        color: #333;
+        text-align: center;
+        padding: 5px; 
+        width: 100%;
+        bottom: 0;
+        margin-top: 80px;
+      }
+      
+      footer a {
+      color: #333;
+      font-size: 1.7rem; 
+      margin: 0 10px; 
+      }
+      
+      footer p {
+      font-size: 12px; 
+      margin-top: 0px; 
+      text-transform: none; /* Desactiva la capitalización */
+      }
+  
+      footer a:hover {
+      color: #e84393;
+      }

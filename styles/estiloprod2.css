@@ -1,0 +1,301 @@
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+    text-transform: none; /* Desactiva la capitalización */
+
+    /* Restablece los márgenes y estilos predeterminados, establece la fuente y otras propiedades globales */
+}
+
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  overflow-x: hidden; 
+  /* Define el tamaño de fuente base, comportamiento de desplazamiento suave y otros ajustes */ 
+}
+
+header{
+  margin-bottom: 20px; 
+
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: #f8baa4;
+  padding: 2rem 9%;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0.5rem 1 rem rgba(0, 0, 0, .1);
+  justify-content: space-between;
+  
+  /* Establece estilos para el encabezado, incluida su posición fija, colores, y organización de elementos */
+}
+
+header .icono img {
+  width: 50px; 
+  height: auto; 
+}
+
+header .logo span{
+  color: var(--pink);
+}
+
+header .navbar a{
+  font-size: 2rem;
+  padding: 0 1.5rem;
+  color: #666;
+}
+
+header .navbar a:hover{
+  color: var(--pink)
+}
+
+header .icons a{
+  font-size: 2.5rem;
+  color: #333;
+  margin-left: 1.5rem;
+}
+
+header .icons a:hover{
+color: var(--pink);
+}
+
+header #toggler{
+  display: none;
+  /* Oculta el toggler */
+}
+
+header .fa-bars{ 
+  font-size: 3rem;
+  color: #333;
+  border-radius: .5rem;
+  padding: .5rem 1.5rem;
+  cursor: pointer;
+  border: .1rem solid rgba(0, 0, 0, .3);
+  display: none;
+}
+
+@media (max-width:991px) {
+  html {
+      font-size: 55%;
+  }
+
+  header {
+      padding: 2rem;
+  }
+}
+
+@media (max-width:768px) {
+  header .fa-bars {
+      display: block;
+  }
+  header .navbar{
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    background: #eee;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+header #toggler:checked ~ .navbar{
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  /* Cambia la forma de la barra de navegación cuando se activa el toggler */
+}
+
+header .navbar a{
+  margin: 1.5rem;
+  padding: 1.5rem;
+  background: #fff;
+  border: .1rem solid rgba(0, 0, 0, .1);
+  display: block;
+}
+}
+@media (max-width:450px){
+
+  html{
+      font-size: 50%;
+  }
+}
+
+h1{
+  text-align: center;
+  text-transform: none; /* Desactiva la capitalización */
+
+}
+
+body {
+  /* background-image: url(../src/img/Fondo.webp);*/
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}
+
+.wrapper {
+  width: 420px;
+  background: #f8baa4;
+  color: #000000;
+  border-radius: 10px;
+  padding: 30px 40px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: none; /* Desactiva la capitalización */
+}
+
+.wrapper h1{
+  font-size: 36px;
+  text-align: center;
+  text-transform: none; /* Desactiva la capitalización */
+}
+
+.wrapper .input-box{
+  position: relative;
+  width: 100%;
+  height: 40px;
+  background: #f8baa4;
+  margin: 30px 0;
+  text-transform: none; /* Desactiva la capitalización */
+}
+
+.wrapper .opciones{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background: #f8baa4;
+  margin: 30px 0;
+  text-transform: none; /* Desactiva la capitalización */
+}
+
+.opciones label{
+  font-size: 14px;
+}
+
+.input-box input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 40px;
+  font-size: 16px;
+  color: #000000;
+  padding: 0 45px 0 20px;
+  box-sizing: border-box;
+  outline: none;
+  text-transform: none; /* Desactiva la capitalización */
+}
+
+.input-box label{
+  font-size: 14px;
+}
+
+.wrapper p {
+  font-size: 15px; 
+  text-align: center; 
+  color: #333; 
+  margin-top: 10px; 
+  text-transform: none; /* Desactiva la capitalización */
+}
+
+.wrapper .btn {
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+  text-transform: none; /* Desactiva la capitalización */
+}
+
+.input-box input::placeholder{
+  color: #616161;
+}
+
+.input-box i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+.wrapper select{
+  width: 100%;
+    height: 50px;
+    background: transparent; 
+    border: 2px solid #ffffff; 
+    border-radius: 40px; 
+    font-size: 16px; 
+    color: #000000; 
+    padding: 0 20px; 
+    box-sizing: border-box;
+    outline: none;
+    appearance: none; /* Oculta la apariencia nativa del selector */
+    text-transform: none; /* Desactiva la capitalización */
+}
+
+.wrapper select option{
+    background-color: #ffffff; 
+    color: #000000; 
+    font-size: 16px; 
+}
+
+
+
+/* Estilos botón submit */
+.wrapper .submit-btn{
+    width: 100%; 
+    height: 45px;
+    background: #fff; 
+    border: none; 
+    border-radius: 40px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1); 
+    cursor: pointer; 
+    font-size: 16px; 
+    color: #333; 
+    font-weight: 600; 
+    transition: background-color 0.3s; 
+}
+
+.wrapper .submit-btn:hover{
+    background-color: #f572a9; 
+    color: #333; 
+}
+
+
+footer{
+  position: fixed; 
+  background-color: #F8BAA4;
+  color: #333;
+  text-align: center;
+  padding: 5px; 
+  width: 100%;
+  bottom: 0;
+  margin-top: 80px;
+}
+
+footer a {
+color: #333;
+font-size: 1.7rem; 
+margin: 0 10px; 
+}
+
+footer p {
+font-size: 12px; 
+margin-top: 0px; 
+text-transform: none; /* Desactiva la capitalización */
+
+}
+
+footer a:hover {
+color: #e84393; 
+}

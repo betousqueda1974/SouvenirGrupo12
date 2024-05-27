@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos de la tienda</title>
+    <link rel="icon" href="../src/img/luxury.png">
+    <script src="https://kit.fontawesome.com/08cc4eca64.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles/estilolistadodeproductos.css">
+    <script type="text/javascript">
+     function ConfirmDelete() {
+      var respuesta=confirm ("Desea eliminar?")
+         if (respuesta==true) {
+            return true;
+         }
+         else {
+            return false;
+         }
+    }
+    </script>
+</head>
+<body>
+        <header>
+            <!-- Encabezado de la pagina -->
+            <input type="checkbox" name="" id="toggler">
+            <label for="toggler" class="fas fa-bars"></label>
+            
+            <a href="../index.html" class="icono">
+              <img src="../src/img/luxury.png" alt="imagen icono">
+              
+          </a>
+            <nav class="navbar">
+                <!-- Enlaces de navegacion -->
+                <a href="../index.html">Inicio</a>
+                <a href="listadodeproductos.html">Productos</a>
+                <a href="sobrenosotros.html">Sobre nosotros</a>
+                <a href="mostrarpromos.html">Promociones</a>
+                <a href="formulariocontacto.html">Contacto</a>
+                
+            </nav>
+            <div class="icons">
+                <a href="../pages/iniciosesion.html" class="fas fa-user"></a>
+                <!-- Icono de usuario -->
+            </div>
+          </header>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <div class="enlace">
+    <a href="AltaProducto.html">Alta de nuevo producto</a>
+    </div>
+    <h1>Listado de Productos de la tienda</h1>
+    <div class="grid">
+        <div class="grid-item">
+        <h3>Llavero souvenir con nombre</h3>
+        <img src="../src/img/producto1.png" alt="Llavero souvenir con nombre" style="max-width: 150px;">
+        <p><strong>Código:</strong> 001</p>
+        <p><strong>Nombre del producto:</strong> Llavero souvenir con nombre</p>
+        <p><strong>Tipo:</strong> Llavero</p>
+        <p><strong>Descripción:</strong> Llavero souvenir personalizado. Materiales: MDF y llavero de aleación de metales.</p>
+        <p><strong>Precio:</strong> $800</p>
+        <p><strong>Stock:</strong> 500 unidades</p>
+        <input type="submit" name="eliminarproducto" value="Eliminar" class="btn-enviar" onclick="ConfirmDelete();">
+          <div class="enlace2">
+          <a href="editarprod2.html">Editar</a>
+          </div>
+        </div>
+        <div class="grid-item">
+        <h3>Suculenta en maceta souvenir</h3>
+        <img src="../src/img/producto2.jpg" alt="Suculenta en maceta souvenir" style="max-width: 150px;">
+        <p><strong>Código:</strong> 002</p>
+        <p><strong>Nombre del producto:</strong> Suculenta en maceta souvenir</p>
+        <p><strong>Tipo:</strong> otro</p> 
+        <p><strong>Descripción:</strong> Maceta de 150gr con suculenta y piedras. Incluye etiqueta personalizada, broche y envoltorio.</p>
+        <p><strong>Precio:</strong> $1200</p>
+        <p><strong>Stock:</strong> 600 unidades</p>
+        <input type="submit" name="eliminarproducto" value="Eliminar" class="btn-enviar" onclick="ConfirmDelete();">
+          <div class="enlace2">
+          <a href="editarprod2.html">Editar</a>
+          </div>
+        </div>
+        <div class="grid-item">
+        <h3>Producto - Vela arómatica en frasco</h3>
+        <img src="../src/img/producto3.jpg"  alt="Vela aromática en frasco" style="max-width: 150px;">
+        <p><strong>Código:</strong> 003</p>
+        <p><strong>Nombre del producto:</strong> Vela arómatica en frasco con etiqueta.</p>
+        <p><strong>Tipo:</strong> vela</p>
+        <p><strong>Descripción:</strong> Vela arómatica en frasco de 125cc con etiqueta personalizada.</p>
+        <p><strong>Precio:</strong> $1700</p>
+        <p><strong>Stock:</strong> 900 unidades</p>
+        <input type="submit" name="eliminarproducto" value="Eliminar" class="btn-enviar" onclick="ConfirmDelete();">
+         <div class="enlace2"> 
+         <a href="editarprod2.html">Editar</a>
+         </div>
+        </div>
+        <div class="grid-item">
+        <h3>Producto - Mini jaula souvenir con flores y etiqueta. </h3>
+        <img src="../src/img/producto4.jpg" alt="Mini jaula souvenir con flores y etiqueta." style="max-width: 150px;">
+        <p><strong>Código:</strong> 004</p>
+        <p><strong>Nombre del producto:</strong> Mini jaula souvenir con flores y etiqueta.</p>
+        <p><strong>Tipo:</strong> adorno</p>
+        <p><strong>Descripción:</strong> Mini jaula souvenir con flores decorativas y etiqueta personalizada. Materiales: MDF y papel.</p>
+        <p><strong>Precio:</strong> $2500</p>
+        <p><strong>Stock:</strong> 500 unidades</p>
+        <input type="submit" name="eliminarproducto" value="Eliminar" class="btn-enviar" onclick="ConfirmDelete();">
+         <div class="enlace2">
+         <a href="editarprod2.html">Editar</a>    
+         </div>
+        </div>
+        <div class="grid-item">
+        <h3>Producto - Llavero arcoiris macramé</h3>
+        <img src="../src/img/producto5.jpeg" alt="Llavero arcoiris macramé" style="max-width: 150px;">
+        <p><strong>Código:</strong> 005</p>
+        <p><strong>Nombre del producto:</strong> Llavero arcoiris macramé</p>
+        <p><strong>Tipo:</strong> Llavero</p>
+        <p><strong>Descripción:</strong> Llavero arcoiris macramé. Materiales: hilo de macramé, llavero de aleación de metales.</p>
+        <p><strong>Precio:</strong> $2300</p>
+        <p><strong>Stock:</strong> 500 unidades</p>
+        <input type="submit" name="eliminarproducto" value="Eliminar" class="btn-enviar" onclick="ConfirmDelete();">
+         <div class="enlace2">
+         <a href="editarprod2.html">Editar</a>  
+         </div>
+        </div>
+        <div class="grid-item">
+         <h3>Producto - Envase con macarrones para regalo</h3>
+         <img src="../src/img/producto6.jpg" alt="Envase con macarrones para regalo" style="max-width: 150px;">
+         <p><strong>Código:</strong> 006</p>
+         <p><strong>Nombre del producto:</strong> Envase con macarrones para regalo</p>
+         <p><strong>Tipo:</strong> otro</p>
+         <p><strong>Descripción:</strong> Envase cuadrado de acetato con macarrones de colores a elección para regalo. Incluye etiqueta personalizada y cinta de raso.</p>
+         <p><strong>Precio:</strong> $3100</p>
+         <p><strong>Stock:</strong> 500 unidades</p>
+         <input type="submit" name="eliminarproducto" value="Eliminar" class="btn-enviar" onclick="ConfirmDelete();">
+          <div class="enlace2">
+          <a href="editarprod2.html">Editar</a>
+          </div>
+         </div>
+    </div>
+    <br><br><br><br><br>
+    <footer>
+    <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+    <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+    <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    <p>Todos los derechos reservados @2024</p>
+    </footer>
+</body>
+</html>
