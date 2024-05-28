@@ -1,0 +1,261 @@
+:root{
+  --pink: #e84393;
+    /* Define la variable CSS para el color rosa */
+  }
+
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  outline: none; border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: .2s linear;
+  text-transform: none; 
+
+    /* Restablece los márgenes y estilos predeterminados, establece la fuente y otras propiedades globales */
+}  
+
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  overflow-x: hidden; 
+  text-transform: none; 
+  /* Define el tamaño de fuente base, comportamiento de desplazamiento suave y otros ajustes */ 
+}
+
+header{
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: #f8baa4;
+  padding: 2rem 9%;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0.5rem 1 rem rgba(0, 0, 0, .1);
+  justify-content: space-between;
+  
+  /* Establece estilos para el encabezado, su posición fija, colores, y organización de elementos */
+}
+
+header .icono img {
+  width: 50px; 
+  height: auto; 
+}
+
+header .logo span{ /*ver si cambia algo*/
+  color: var(--pink);
+}
+
+header .navbar a{
+  font-size: 2rem;
+  padding: 0 1.5rem;
+  color: #666;
+}
+
+header .navbar a:hover{
+  color: var(--pink)
+}
+
+header #toggler{
+  display: none;
+  /* Oculta el toggler */
+}
+
+header .fa-bars{ 
+  font-size: 3rem;
+  color: #333;
+  border-radius: .5rem;
+  padding: .5rem 1.5rem;
+  cursor: pointer;
+  border: .1rem solid rgba(0, 0, 0, .3);
+  display: none;
+}
+
+.icons .fas.fa-user {
+  font-size: 25px;
+  color: #333;
+
+}
+@media (max-width:991px) {
+  html {
+      font-size: 55%;
+  }
+
+  header {
+      padding: 2rem;
+  }
+}
+
+@media (max-width:768px) {
+  header .fa-bars {
+      display: block;
+  }
+  header .navbar{
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    background: #eee;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+header #toggler:checked ~ .navbar{
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  /* Cambia forma de la barra de navegación cuando se activa el toggler */
+}
+
+header .navbar a{
+  margin: 1.5rem;
+  padding: 1.5rem;
+  background: #fff;
+  border: .1rem solid rgba(0, 0, 0, .1);
+  display: block;
+}
+}
+@media (max-width:450px){
+
+  html{
+      font-size: 50%;
+  }
+}
+
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+  padding-bottom: 60px; 
+  padding-top: 60px;
+}  
+
+.container {
+  display: flex;
+  width: 80%;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.left, .right {
+  padding: 20px;
+  flex: 1;
+}
+
+.left {
+  border-right: 1px solid #ccc;
+}
+
+.left h1 {
+  margin: 0 0 10px;
+  font-size: 36px;
+
+}
+
+.left p {
+  margin: 0 0 20px;
+}
+
+.texto {
+  font-size: 15px; /* Ajusta este valor para cambiar el tamaño del texto */
+}
+
+.social-icons a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  font-size: 24px;
+}
+
+.right form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px; 
+
+}
+
+.right form input,
+.right form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  border-color: #f8baa4;
+
+}
+
+.right form textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.right form button {
+  padding: 10px;
+  font-size: 16px;
+   border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Añade una transición para un cambio suave */
+
+}
+
+.right form .btn-submit {
+  background-color: #ffffff; 
+  color: #333;
+  margin-right: 10px;
+  font-weight: 600; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1); 
+
+}
+
+.right form .btn-submit:hover {
+  background-color: #e84393; 
+}
+
+.right form .btn-cancel {
+  background-color: #ffffff; 
+  color: #333;
+  font-weight: 600; 
+  transition: background-color 0.3s; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1); 
+}
+
+.right form .btn-cancel:hover {
+   background-color: #e84393; 
+}
+
+.right form .btn-container {
+  display: flex;
+  justify-content: flex-start; 
+}
+    
+footer{
+  text-transform: none; /* Desactiva la capitalización */
+  background-color: #F8BAA4;
+  color: #333;
+  text-align: center;
+  padding: 5px; 
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+    
+footer a {
+  color: #333;
+  font-size: 1.7rem; 
+  margin: 0 10px; 
+}
+    
+footer p {
+  font-size: 12px; 
+  margin-top: 0px; 
+  text-transform: none; /* Desactiva la capitalización */
+} 
+
+footer a:hover {
+  color: #e84393; 
+}
