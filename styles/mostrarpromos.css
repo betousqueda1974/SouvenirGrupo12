@@ -32,7 +32,7 @@ header{
   padding: 2rem 9%;
   display: flex;
   align-items: center;
-  z-index: 1000;*/
+  z-index: 1000;
   box-shadow: 0.5rem 1 rem rgba(0, 0, 0, .1);
   justify-content: space-between;
   /* Establece estilos para el encabezado, su posición fija, colores, y organización de elementos */
