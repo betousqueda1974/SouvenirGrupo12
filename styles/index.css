@@ -132,14 +132,25 @@ body {
     background-color: white;
 }
 
-#sidebar-toggle {
-    display: none;
-}
 
-/* Estilos botón del sidebar */
+
+/* botón  abrir el sidebar */
 .open-btn {
     font-size: 24px;
     cursor: pointer;
+    display: none; /* Oculto por defecto */
+    color: #333;
+    margin-left: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .open-btn {
+        display: block; 
+    }
+
+    .sidebar {
+        left: -250px; 
+    }
 }
 
 .sidebar {
@@ -153,6 +164,17 @@ body {
     z-index: 1000; 
 }
 
+.sidebar.active {
+    left: 0; 
+}
+
+.sidebar .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
 
 .sidebar a {
     display: block;
@@ -164,31 +186,6 @@ body {
 
 .sidebar a:hover {
     background-color: #e84393; 
-}
-
-/* Estilos para mostrar la barra lateral cuando el input checkbox está marcado */
-#sidebar-toggle:checked + .sidebar {
-    left: 0;
-}
-
-.sidebar.active {
-    left: 0; /* Muestra el sidebar cuando está activo */
-  }
-
-  .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;   
-    cursor: pointer;
-  }
-
-
-/* Estilos del sidebar en pantallas más chicas */
-@media (max-width: 768px) {
-    .sidebar {
-        left: 0; 
-    }
 }
 
 .container-items{
@@ -344,3 +341,7 @@ footer{
     footer a:hover {
         color: #e84393; 
     }
+
+    
+
+    
