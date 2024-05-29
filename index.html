@@ -15,8 +15,10 @@
     <header>
         <!-- Encabezado de la pagina -->
 
-        <div class="sidebar">
-            <label for="sidebar-toggle" class="close-btn">&times;</label> <!-- Boton de cierre -->
+ <!-- Encabezado de la página -->
+ <div class="open-btn" id="openSidebar">&#9776;</div>
+ <div class="sidebar" id="sidebar">
+     <label for="sidebar-toggle" class="close-btn" id="closeSidebar">&times;</label> <!-- Botón de cierre -->
 
             <a href="index.html">Inicio</a>
             <a href="pages/listadodeproductos.html">Productos</a>
@@ -142,22 +144,25 @@
 
 //Para abrir y cerrar el sidebar en pantallas chicas
 document.addEventListener('DOMContentLoaded', function () {
-    var menu = document.querySelector('.sidebar');
-    var closeBtn = document.querySelector('.close-btn');
+        var menu = document.getElementById('sidebar');
+        var openBtn = document.getElementById('openSidebar');
+        var closeBtn = document.getElementById('closeSidebar');
 
-    closeBtn.addEventListener('click', function () {
-        menu.classList.remove('active');
-    });
+        openBtn.addEventListener('click', function () {
+            menu.classList.add('active');
+        });
 
-
-    document.addEventListener('click', function (event) {
-
-        if (!menu.contains(event.target) && event.target !== closeBtn) {
+        closeBtn.addEventListener('click', function () {
             menu.classList.remove('active');
-        }
-    });
-});
+        });
 
+        document.addEventListener('click', function (event) {
+            if (!menu.contains(event.target) && event.target !== openBtn && event.target !== closeBtn) {
+                menu.classList.remove('active');
+            }
+        });
+    });
+    </script>
 </script>
 
 </body>
