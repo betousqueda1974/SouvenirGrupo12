@@ -1,4 +1,4 @@
-let BASE_URL = 'http://localhost:5000';
+let BASE_URL = 'http://127.0.0.1:5000';
 
 let productos = document.querySelector("#Producto");
 let productosCopia = productos.cloneNode(true);
@@ -7,9 +7,9 @@ let contenedor = document.querySelector(".grid-item");
 
 productos.remove();
 
-let URL_all_product = BASE_URL + '/api/products/list'
+let URL_all_product = BASE_URL + '/api/products/list';
 
-fetchDataProd (URL_all_product, 'GET', (data) => {
+fetchDataProd(URL_all_product, "GET", (data) => {
   // Procesamiento de la info que llega de la API
   let products = [];
   for (const product of data) {
@@ -19,14 +19,14 @@ fetchDataProd (URL_all_product, 'GET', (data) => {
     nuevoProducto.querySelector("#Nombre").innerHTML = product.nombre;
     nuevoProducto.querySelector("#Desc").innerHTML = product.descripcion;
     nuevoProducto.querySelector("#Tipo").innerHTML = product.tipo;
-    nuevoProducto.querySelector("Precio").innerHTML = product.precio;
-    nuevoProducto.querySelector("Cantidad").innerHTML = product.cantidad;
+    nuevoProducto.querySelector("#Precio").innerHTML = product.precio;
+    nuevoProducto.querySelector("#Cantidad").innerHTML = product.cantidad;
 
-    products.push(nuevoProducto);
-
-    contenedor.replaceChildren(...products);
+    //products.push(nuevoProducto);
+    contenedor.appendChild(nuevoProducto);
+    //contenedor.replaceChildren(...products);
    }
-  });
+  })
 /*
     //let newTask = taskTemplates[fetch_data[task_status].TaskTemplatesName].cloneNode(true);
     newTask.querySelector("h3 .titulo").innerHTML = task.nombre;

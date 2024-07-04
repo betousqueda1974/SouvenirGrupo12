@@ -1,4 +1,4 @@
-function  fetchDataProd(url, method, callback, data = null) {
+function fetchDataProd(url, method, callback, data = null) {
   const options = {
     method: method,
     headers: {
@@ -8,8 +8,8 @@ function  fetchDataProd(url, method, callback, data = null) {
   };
 
   fetch(url, options)
-  .then(response => response.json())
-  .then(data => {
+    .then(response => response.json())
+    .then(data => {
       callback(data);
   })
   .catch(error => console.log("Ocurrió un error! " + error));
