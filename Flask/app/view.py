@@ -21,7 +21,7 @@ def get_product(id_product):
   product = Product.get_product_by_id(id_product)
   if not product:
     return jsonify({'message': 'Product not found'}), 404
-  return jsonify(Product.serialize())
+  return jsonify(product.serialize())
 
 def create_product():
   data = request.json

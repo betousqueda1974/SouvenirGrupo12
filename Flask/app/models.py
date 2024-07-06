@@ -82,7 +82,7 @@ class Product:
     row = cursor.fetchone()
     cursor.close()
     if row:
-      return Task(
+      return Product(
         id_product=row[0],
         nombre=row[1],
         descripcion=row[2],
