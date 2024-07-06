@@ -10,15 +10,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="../styles/estilolistadodeproductos.css">
     <script type="text/javascript">
-     function ConfirmDelete() {
-      var respuesta=confirm ("Desea eliminar?")
-         if (respuesta==true) {
-            return true;
-         }
-         else {
-            return false;
-         }
-    }
+        function ConfirmDelete() {
+            var respuesta = confirm("Desea eliminar?");
+            return respuesta;
+        }
     </script>
 </head>
 <body>
@@ -45,26 +40,34 @@
                 <!-- Icono de usuario -->
             </div>
           </header>
-    <br><br><br><br><br><br><br><br><br><br><br>
-    <div class="enlace">
-    <a href="AltaProducto.html">Alta de nuevo producto</a>
+    <br><br><br><br><br><br><br><br>
+    <div class="enlace-container">
+      <div class="enlace">
+        <a href="AltaProducto.html" class="btn-enlace">Alta de nuevo producto</a>
+      </div>
     </div>
+    <br><br>
     <h1>Listado de Productos de la tienda</h1>
+    <div class="grid-container" id="products-container">
+      <!-- Los productos se agregarán aquí dinámicamente -->
+  </div>
 
-    <div class="grid-item">
-      <article id="Producto">
-        <img id="Foto" src="../src/img/producto1.png" alt="Llavero souvenir con nombre" style="max-width: 150px;">
-        <p>Nombre: <span id="Nombre"></span></p>
-        <p>Descripción: <span id="Desc"></span></p>
-        <p>Tipo: <span id="Tipo"></span></p>
-        <p>Precio: <span id="Precio"></span></p>
-        <p>Cantidad: <span id="Cantidad"></span></p>
-        <input type="submit" name="eliminarproducto" value="Eliminar" class="btn-enviar" onclick="ConfirmDelete();">
-        <div class="enlace2">
-          <a href="editarprod2.html">Editar</a>
+  <div class="grid-item">
+    <article id="Producto">
+      <img id="Foto" src="../src/img/producto1.png" alt="Llavero souvenir con nombre">
+      <div>
+        <p><strong>Nombre:</strong> <span id="Nombre"></span></p>
+        <p><strong>Descripción:</strong> <span id="Desc"></span></p>
+        <p><strong>Tipo:</strong> <span id="Tipo"></span></p>
+        <p><strong>Precio:</strong> <span id="Precio"></span></p>
+        <p><strong>Cantidad:</strong> <span id="Cantidad"></span></p>
+        <div class="botones">
+          <input type="submit" name="eliminarproducto" value="Eliminar" class="btn-enviar" onclick="ConfirmDelete();">
+          <button type="button" class="btn-enviar" onclick="window.location.href='editarprod2.html'">Editar</button>
         </div>
-      </article>
-    </div>
+      </div>
+    </article>
+  </div>
 
     <!--
     <div class="grid">
