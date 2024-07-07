@@ -17,39 +17,40 @@
     </script>
 </head>
 <body>
-        <header>
-            <!-- Encabezado de la pagina -->
-            <input type="checkbox" name="" id="toggler">
-            <label for="toggler" class="fas fa-bars"></label>
-            
-            <a href="../index.html" class="icono">
-              <img src="../src/img/luxury.png" alt="imagen icono">
-              
-          </a>
-            <nav class="navbar">
-                <!-- Enlaces de navegacion -->
-                <a href="../index.html">Inicio</a>
-                <a href="listadodeproductos.html">Productos</a>
-                <a href="sobrenosotros.html">Sobre nosotros</a>
-                <a href="mostrarpromos.html">Promociones</a>
-                <a href="formulariocontacto.html">Contacto</a>
-                
-            </nav>
-            <div class="icons">
-                <a href="../pages/iniciosesion.html" class="fas fa-user"></a>
-                <!-- Icono de usuario -->
-            </div>
-          </header>
-    <br><br><br><br><br><br><br><br>
-    <div class="enlace-container">
-      <div class="enlace">
-        <a href="AltaProducto.html" class="btn-enlace">Alta de nuevo producto</a>
-      </div>
+  <header>
+    <!-- Encabezado de la pagina -->
+    <input type="checkbox" name="" id="toggler">
+    <label for="toggler" class="fas fa-bars"></label>
+    
+    <a href="../index.html" class="icono">
+      <img src="../src/img/luxury.png" alt="imagen icono">
+    </a>
+
+    <nav class="navbar">
+      <!-- Enlaces de navegacion -->
+      <a href="../index.html">Inicio</a>
+      <a href="listadodeproductos.html">Productos</a>
+      <a href="sobrenosotros.html">Sobre nosotros</a>
+      <a href="mostrarpromos.html">Promociones</a>
+      <a href="formulariocontacto.html">Contacto</a>
+    </nav>
+
+    <div class="icons">
+        <a href="../pages/iniciosesion.html" class="fas fa-user"></a>
+        <!-- Icono de usuario -->
     </div>
-    <br><br>
-    <h1>Listado de Productos de la tienda</h1>
-    <div class="grid-container" id="products-container">
-      <!-- Los productos se agregarán aquí dinámicamente -->
+  </header>
+
+  <br><br><br><br><br><br><br><br><br>
+  <div class="enlace-container">
+    <div class="enlace">
+      <a href="AltaProducto.html" class="btn-enlace">Alta de nuevo producto</a>
+    </div>
+  </div>
+
+  <h1>Listado de Productos de la tienda</h1>
+  <div class="grid-container" id="products-container">
+    <!-- Los productos se agregarán aquí dinámicamente -->
   </div>
 
   <div class="grid-item">
@@ -61,110 +62,26 @@
         <p><strong>Tipo:</strong> <span id="Tipo"></span></p>
         <p><strong>Precio:</strong> <span id="Precio"></span></p>
         <p><strong>Cantidad:</strong> <span id="Cantidad"></span></p>
+        <input type="hidden" name="product_id" id="Product_id">
         <div class="botones">
           <input type="submit" name="eliminarproducto" value="Eliminar" class="btn-enviar" onclick="ConfirmDelete();">
-          <button type="button" class="btn-enviar" onclick="window.location.href='editarprod2.html'">Editar</button>
+          <button type="button" id="Editar" class='btn-enviar'>Editar</button>
+       <!--   <button type="button" class="btn-enviar" onclick="window.location.href='editarprod2.html'">Editar</button>
+          -->
         </div>
       </div>
     </article>
   </div>
 
-    <!--
-    <div class="grid">
-        <div class="grid-item">
-          <h3>Llavero souvenir con nombre</h3>
-          <img src="../src/img/producto1.png" alt="Llavero souvenir con nombre" style="max-width: 150px;">
-          <p><strong>Nombre del producto:</strong> Llavero souvenir con nombre</p>
-          <p><strong>Tipo:</strong> Llavero</p>
-          <p><strong>Descripción:</strong> Llavero souvenir personalizado. Materiales: MDF y llavero de aleación de metales.</p>
-          <p><strong>Precio:</strong> $800</p>
-          <p><strong>Stock:</strong> 500 unidades</p>
-          <input type="submit" name="eliminarproducto" value="Eliminar" class="btn-enviar" onclick="ConfirmDelete();">
-            <div class="enlace2">
-            <a href="editarprod2.html">Editar</a>
-            </div>
-        </div>
-        <div class="grid-item">
-        <h3>Suculenta en maceta souvenir</h3>
-        <img src="../src/img/producto2.jpg" alt="Suculenta en maceta souvenir" style="max-width: 150px;">
-        <p><strong>Código:</strong> 002</p>
-        <p><strong>Nombre del producto:</strong> Suculenta en maceta souvenir</p>
-        <p><strong>Tipo:</strong> otro</p> 
-        <p><strong>Descripción:</strong> Maceta de 150gr con suculenta y piedras. Incluye etiqueta personalizada, broche y envoltorio.</p>
-        <p><strong>Precio:</strong> $1200</p>
-        <p><strong>Stock:</strong> 600 unidades</p>
-        <input type="submit" name="eliminarproducto" value="Eliminar" class="btn-enviar" onclick="ConfirmDelete();">
-          <div class="enlace2">
-          <a href="editarprod2.html">Editar</a>
-          </div>
-        </div>
-        <div class="grid-item">
-        <h3>Producto - Vela arómatica en frasco</h3>
-        <img src="../src/img/producto3.jpg"  alt="Vela aromática en frasco" style="max-width: 150px;">
-        <p><strong>Código:</strong> 003</p>
-        <p><strong>Nombre del producto:</strong> Vela arómatica en frasco con etiqueta.</p>
-        <p><strong>Tipo:</strong> vela</p>
-        <p><strong>Descripción:</strong> Vela arómatica en frasco de 125cc con etiqueta personalizada.</p>
-        <p><strong>Precio:</strong> $1700</p>
-        <p><strong>Stock:</strong> 900 unidades</p>
-        <input type="submit" name="eliminarproducto" value="Eliminar" class="btn-enviar" onclick="ConfirmDelete();">
-         <div class="enlace2"> 
-         <a href="editarprod2.html">Editar</a>
-         </div>
-        </div>
-        <div class="grid-item">
-        <h3>Producto - Mini jaula souvenir con flores y etiqueta. </h3>
-        <img src="../src/img/producto4.jpg" alt="Mini jaula souvenir con flores y etiqueta." style="max-width: 150px;">
-        <p><strong>Código:</strong> 004</p>
-        <p><strong>Nombre del producto:</strong> Mini jaula souvenir con flores y etiqueta.</p>
-        <p><strong>Tipo:</strong> adorno</p>
-        <p><strong>Descripción:</strong> Mini jaula souvenir con flores decorativas y etiqueta personalizada. Materiales: MDF y papel.</p>
-        <p><strong>Precio:</strong> $2500</p>
-        <p><strong>Stock:</strong> 500 unidades</p>
-        <input type="submit" name="eliminarproducto" value="Eliminar" class="btn-enviar" onclick="ConfirmDelete();">
-         <div class="enlace2">
-         <a href="editarprod2.html">Editar</a>    
-         </div>
-        </div>
-        <div class="grid-item">
-        <h3>Producto - Llavero arcoiris macramé</h3>
-        <img src="../src/img/producto5.jpeg" alt="Llavero arcoiris macramé" style="max-width: 150px;">
-        <p><strong>Código:</strong> 005</p>
-        <p><strong>Nombre del producto:</strong> Llavero arcoiris macramé</p>
-        <p><strong>Tipo:</strong> Llavero</p>
-        <p><strong>Descripción:</strong> Llavero arcoiris macramé. Materiales: hilo de macramé, llavero de aleación de metales.</p>
-        <p><strong>Precio:</strong> $2300</p>
-        <p><strong>Stock:</strong> 500 unidades</p>
-        <input type="submit" name="eliminarproducto" value="Eliminar" class="btn-enviar" onclick="ConfirmDelete();">
-         <div class="enlace2">
-         <a href="editarprod2.html">Editar</a>  
-         </div>
-        </div>
-        <div class="grid-item">
-         <h3>Producto - Envase con macarrones para regalo</h3>
-         <img src="../src/img/producto6.jpg" alt="Envase con macarrones para regalo" style="max-width: 150px;">
-         <p><strong>Código:</strong> 006</p>
-         <p><strong>Nombre del producto:</strong> Envase con macarrones para regalo</p>
-         <p><strong>Tipo:</strong> otro</p>
-         <p><strong>Descripción:</strong> Envase cuadrado de acetato con macarrones de colores a elección para regalo. Incluye etiqueta personalizada y cinta de raso.</p>
-         <p><strong>Precio:</strong> $3100</p>
-         <p><strong>Stock:</strong> 500 unidades</p>
-         <input type="submit" name="eliminarproducto" value="Eliminar" class="btn-enviar" onclick="ConfirmDelete();">
-          <div class="enlace2">
-          <a href="editarprod2.html">Editar</a>
-          </div>
-         </div>
-    </div>
-    -->
-    <br><br><br><br><br>
-    <footer>
-    <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-    <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-    <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
-    <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-    <p>Todos los derechos reservados @2024</p>
-    </footer>
-    <script src="../js/fetchDataProd.js"></script>
-    <script src="../js/listadodeproductos.js"></script>
+  <br><br><br><br><br>
+  <footer>
+  <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+  <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+  <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+  <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+  <p>Todos los derechos reservados @2024</p>
+  </footer>
+  <script src="../js/fetchDataProd.js"></script>
+  <script src="../js/listadodeproductos.js"></script>
 </body>
 </html>

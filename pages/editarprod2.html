@@ -51,7 +51,7 @@
   <br><br><br><br><br><br><br><br>
 
   <div class="wrapper">
-    <form action="" method="get">
+    <form action="" method="post", id="FormEdit">
     <h1>Editar Producto</h1>
   
     <div class="input-box">
@@ -69,31 +69,31 @@
     </label>
 
     <label class="radio">
-      <input type="radio" value="llavero" name="opciones">
+      <input type="radio" id="opcllavero" value="Llavero" name="opciones">
       Llavero
       <span></span>
     </label>
 
     <label class="radio">
-      <input type="radio" value="maceta" name="opciones">
+      <input type="radio" id="opcmaceta" value="Maceta" name="opciones">
       Maceta
       <span></span>
     </label>
 
     <label class="radio">
-      <input type="radio" value="adorno" name="opciones">
+      <input type="radio" id="opcadorno" value="Adorno" name="opciones">
       Adorno
       <span></span>
     </label>
 
     <label class="radio">
-      <input type="radio" value="vela" name="opciones">
+      <input type="radio" id="opcvela" value="Vela" name="opciones">
       Vela
       <span></span>
     </label>
 
     <label class="radio">
-      <input type="radio" value="otros" name="opciones">
+      <input type="radio" id="opcotros" value="Otros" name="opciones">
       Otros
       <span></span>
     </label>
@@ -108,9 +108,12 @@
         <label for="stock">Cantidad en stock:</label>
         <input id="stock" type="number" name="stock" placeholder="Editar unidades en stock">
        </div>
-
+<!--
        <input class="btn submit-btn" type="submit" value="Aceptar" onclick="ConfirmEdition();"> <br><br>
-       <input class="btn submit-btn" type="reset" value="Cancelar"> 
+      -->
+      <button type="button" id="Aceptar" class="btn submit-btn">Aceptar</button> <br><br>
+      
+      <input class="btn submit-btn" type="reset" value="Cancelar"> 
 
        <p><a href="listadodeproductos.html" >Volver</a></p>
     </form>
@@ -126,5 +129,9 @@
     <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
     <p>Todos los derechos reservados @2024</p>
   </footer>
+
+  <script src="../js/fetchDataProd.js"></script>
+  <script src="../js/updateproduct.js"></script>
+
 </body>
 </html>

@@ -53,6 +53,7 @@ class Product:
       """
       SELECT *
         FROM productos
+       WHERE disponible = TRUE
        ORDER BY nombre
       """
     )
