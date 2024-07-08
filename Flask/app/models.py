@@ -10,40 +10,6 @@ class Product:
     self.precio = precio
     self.cantidad = cantidad
     self.disponible = disponible
-  
-  #@staticmethod
-  #def __get_product_by_query(query):
-  #  db = get_db()
-  #  cursor = db.cursor()
-  #  cursor.execute(query)
-  #  rows = cursor.fetchall()
-  
-  #  products = []
-  #  for row in rows:
-  #    products.append(
-  #      Product(
-  #        id_product=row[0],
-  #        nombre=row[1],
-  #        descripcion=row[2],
-  #        tipo=row[3],
-  #        precio=row[4],
-  #        cantidad=row[5],
-  #        disponible=row[6]
-  #      )
-  #    )
-  #  cursor.close()
-  #  return products
-    
-  #@staticmethod
-  #def get_list_products():
-  #  return Product.__get_product_by_query
-  #  (
-  #    """
-  #    SELECT *
-  #      FROM productos
-  #    ORDER BY nombre
-  #    """
-  #  )
 
   @staticmethod
   def get_list_products():
@@ -54,7 +20,7 @@ class Product:
       SELECT *
         FROM productos
        WHERE disponible = TRUE
-       ORDER BY nombre
+       ORDER BY id
       """
     )
     rows = cursor.fetchall()

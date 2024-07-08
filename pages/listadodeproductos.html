@@ -9,12 +9,6 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="../styles/estilolistadodeproductos.css">
-    <script type="text/javascript">
-        function ConfirmDelete() {
-            var respuesta = confirm("Desea eliminar?");
-            return respuesta;
-        }
-    </script>
 </head>
 <body>
   <header>
@@ -55,7 +49,7 @@
 
   <div class="grid-item">
     <article id="Producto">
-      <img id="Foto" src="../src/img/producto1.png" alt="Llavero souvenir con nombre">
+      <img id="Foto" src="" alt="">
       <div>
         <p><strong>Nombre:</strong> <span id="Nombre"></span></p>
         <p><strong>Descripción:</strong> <span id="Desc"></span></p>
@@ -64,10 +58,8 @@
         <p><strong>Cantidad:</strong> <span id="Cantidad"></span></p>
         <input type="hidden" name="product_id" id="Product_id">
         <div class="botones">
-          <input type="submit" name="eliminarproducto" value="Eliminar" class="btn-enviar" onclick="ConfirmDelete();">
+          <button type="button" name="eliminarproducto" class="btn-enviar" id="Disable">Eliminar</button>
           <button type="button" id="Editar" class='btn-enviar'>Editar</button>
-       <!--   <button type="button" class="btn-enviar" onclick="window.location.href='editarprod2.html'">Editar</button>
-          -->
         </div>
       </div>
     </article>

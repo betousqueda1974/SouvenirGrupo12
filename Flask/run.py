@@ -6,8 +6,6 @@ from app.database import *
 app = Flask(__name__)
 
 #Rutas
-app.route('/', methods=['GET'])(index)
-
 app.route('/api/products/list', methods=['GET'])(get_all_products)
 app.route('/api/products/fetch/<int:id_product>', methods=['GET'])(get_product)
 app.route('/api/products/create', methods=['POST'])(create_product)

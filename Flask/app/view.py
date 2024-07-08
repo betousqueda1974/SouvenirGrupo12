@@ -1,18 +1,6 @@
 from flask import jsonify, request # type: ignore
 from app.models import Product
 
-def index():
-  return jsonify(
-    {
-      'mensaje': 'hola Mundo APIS con Flask'
-    }
-  )
-
-
-#def get_pending_tasks():
-# tasks = Task.get_all_pending()
-# return jsonify([task.serialize() for task in tasks])
-
 def get_all_products():
   products = Product.get_list_products()
   return jsonify([Product.serialize() for Product in products])

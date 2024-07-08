@@ -5,12 +5,19 @@ let submitButton = document.querySelector("#Aceptar");
 let params = new URLSearchParams(document.location.search);
 let prod_id = params.get("product_id");
 
+let valortipo;
+
 function new_prod(event) {
-  submitButton.addEventListener("click", new_prod);
+  let eleupd = document.getElementsByName('opciones');
+  for (i = 0; i < eleupd.length; i++) {
+    if (document.querySelector("#" + eleupd[i].id).checked == true){
+      valortipo = eleupd[i].value;
+    }
+  }
   let data = {
     'nombre': document.querySelector("#FormCreate #nombreproducto").value,
     'descripcion': document.querySelector("#FormCreate #descrip").value,
-    'tipo': 'Llavero',
+    'tipo': valortipo,
     'precio': document.querySelector("#FormCreate #precio").value,
     'cantidad': document.querySelector("#FormCreate #stock").value
   }

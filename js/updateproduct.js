@@ -5,26 +5,21 @@ let submitButton = document.querySelector("#Aceptar");
 let params = new URLSearchParams(document.location.search);
 let prod_id = params.get("product_id");
 
+let  valortipo;
+
 function update_prod(event) {
   
   let eleupd = document.getElementsByName('opciones');
   for (i = 0; i < eleupd.length; i++) {
     if (document.querySelector("#" + eleupd[i].id).checked == true){
-      let valortipo = eleupd[i].value;
-      console.log(valortipo);
-      console.log(document.querySelector("#FormEdit #descrip").value)
+      valortipo = eleupd[i].value;
     }
-    /*
-    if (eleupd[i].value == data.tipo){
-      document.querySelector("#" + eleupd[i].id).checked = true;
-    }
-    */
   }
 
   let data = {
     'nombre': document.querySelector("#FormEdit #nombreproducto").value,
     'descripcion': document.querySelector("#FormEdit #descrip").value,
-    'tipo': 'Vela',
+    'tipo': valortipo,
     'precio': document.querySelector("#FormEdit #precio").value,
     'cantidad': document.querySelector("#FormEdit #stock").value
   }

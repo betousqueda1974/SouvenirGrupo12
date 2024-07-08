@@ -9,18 +9,6 @@
   <script src="https://kit.fontawesome.com/08cc4eca64.js" crossorigin="anonymous"></script>
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <script type="text/javascript">
-    function ConfirmEdition() {
-     var respuesta=confirm ("Confirma la edición?")
-        if (respuesta==true) {
-           return true;
-        }
-        else {
-           return false;
-        }
-   }
-   </script>
-
 </head>
 
 <body>
@@ -108,11 +96,7 @@
         <label for="stock">Cantidad en stock:</label>
         <input id="stock" type="number" name="stock" placeholder="Editar unidades en stock">
        </div>
-<!--
-       <input class="btn submit-btn" type="submit" value="Aceptar" onclick="ConfirmEdition();"> <br><br>
-      -->
       <button type="button" id="Aceptar" class="btn submit-btn">Aceptar</button> <br><br>
-      
       <input class="btn submit-btn" type="reset" value="Cancelar"> 
 
        <p><a href="listadodeproductos.html" >Volver</a></p>
